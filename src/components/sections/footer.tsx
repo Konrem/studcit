@@ -1,6 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import SocialBtn from "../ui/socialBtn";
+import Map from "../ui/Map";
 
 export default function Footer() {
   const socials = [
@@ -83,13 +84,7 @@ export default function Footer() {
         </div>
       </div>
       <div>
-        <Image
-          className="dark:invert mr-3 inline-block"
-          src="/test.svg"
-          alt="Icon"
-          width={250}
-          height={250}
-        />
+        <Map />
       </div>
     </footer>
   );

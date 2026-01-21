@@ -1,6 +1,4 @@
-import Image from "next/image";
 import TimelineBlock from "../ui/timeline-block";
-import { describe } from "node:test";
 
 export default function Timeline() {
   const timeline = [
