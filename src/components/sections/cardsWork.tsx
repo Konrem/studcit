@@ -29,7 +29,7 @@ export default function AboutCards() {
     },
   ];
   return (
-    <div className="mt-[5em]">
+    <div className="mt-[5em]" id="about">
       <div className="text-center pb-[1rem]">
         <h2 className="font-bold text-5xl">СтудЦІТ - це</h2>
         <p className="font-medium text-xl py-[1rem]">

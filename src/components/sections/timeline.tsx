@@ -35,7 +35,7 @@ export default function Timeline() {
   ];
 
   return (
-    <div className="mt-[5em]">
+    <div className="mt-[5em]" id="how-we-work">
       <h2 className="font-bold text-center mb-10 text-5xl">Як ми працюємо?</h2>
       <ul className="relative before:absolute before:top-0 before:left-1/2 before:h-full before:w-0.5 before:-translate-x-1/2 before:rounded-full before:bg-black overflow-hidden">
         {timeline.map((block, index) => (

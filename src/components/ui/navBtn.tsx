@@ -1,10 +1,10 @@
 import Link from "next/link";
 
-export default function NavBtn(props: { title: string; link: string; }) {
+export default function NavBtn(props: { title: string; link: string }) {
   return (
     <Link
       href={props.link}
-      className="p-2 mx-3
+      className="py-5 lg:p-2 mx-3
                 inline-flex 
                 flex-col 
                 items-center 
