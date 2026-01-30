@@ -29,14 +29,14 @@ export default function AboutCards() {
     },
   ];
   return (
-    <div className="mt-[5em]" id="about">
-      <div className="text-center pb-[1rem]">
-        <h2 className="font-bold text-5xl">СтудЦІТ - це</h2>
-        <p className="font-medium text-xl py-[1rem]">
+    <div className="mt-[5rem]" id="about">
+      <div className="text-center pb-4">
+        <h2 className="font-bold text-3xl md:text-5xl">СтудЦІТ - це</h2>
+        <p className="font-medium text-xl py-4">
           не тільки спеціалісти, які отримують вищу, а також
         </p>
       </div>
-      <div className="container mx-auto flex justify-around">
+      <div className="container mx-auto flex justify-around flex-wrap gap-8 lg:flex-nowrap lg:gap-2">
         {cardsWork.map((card, index) => (
           <div key={index}>
             <Card
