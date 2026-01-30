@@ -36,18 +36,18 @@ export default function Timeline() {
 
   return (
     <div className="mt-[5em]" id="how-we-work">
-      <h2 className="font-bold text-center mb-10 text-5xl">Як ми працюємо?</h2>
-      <ul className="relative before:absolute before:top-0 before:left-1/2 before:h-full before:w-0.5 before:-translate-x-1/2 before:rounded-full before:bg-black overflow-hidden">
+      <h2 className="font-bold text-center mb-10 text-3xl md:text-5xl">Як ми працюємо?</h2>
+      <ul className="relative before:absolute before:top-0 before:left-[1.4rem] pl-[2rem] pr-4 sm:before:left-[2.4rem] sm:px-[3rem] lg:before:left-1/2 before:h-full before:w-0.5 before:-translate-x-1/2 before:rounded-full before:bg-black overflow-hidden">
         {timeline.map((block, index) => (
           <li
-            className="group relative grid grid-cols-2 odd:-ms-5 even:-me-5"
+            className="group relative grid lg:grid-cols-2 my-10 -ml-5 lg:m-0 lg:odd:-ml-5 lg:even:-mr-5"
             key={index}
           >
-            <div className="relative flex items-start gap-4 group-even:flex-row-reverse group-even:text-right group-odd:order-last">
+            <div className="relative flex items-start gap-4 lg:group-even:flex-row-reverse lg:group-even:text-right lg:group-odd:order-last">
               <span className="size-5 mt-8 shrink-0 rounded-full bg-black"></span>
-              <span className="absolute mt-10 w-[150px] h-[2px] bg-black"></span>
+              <span className="absolute mt-10 w-[60px] sm:w-[150px] h-[2px] bg-black"></span>
               <div
-                className={`size-3 mt-9 ${index % 2 === 0 ? "ml-[110px]" : "mr-[110px]"} shrink-0 rounded-full bg-black`}
+                className={`size-3 ml-[20px] sm:ml-[110px] lg:ml-0 mt-9 ${index % 2 === 0 ? "lg:ml-[110px]" : "lg:mr-[110px]"} shrink-0 rounded-full bg-black`}
               ></div>
               <TimelineBlock
                 icon={block.icon}
@@ -55,7 +55,7 @@ export default function Timeline() {
                 description={block.description}
               />
             </div>
-            <div aria-hidden="true"></div>
+            <div className="hidden lg:block" aria-hidden="true"></div>
           </li>
         ))}
       </ul>
