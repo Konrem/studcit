@@ -47,7 +47,7 @@ export default function Footer() {
                 width={25}
                 height={25}
               />
-              <span className="fw-medium text-xl">+380985252165</span>
+              <span className="fw-medium text-xl">+38(098) 525-2165</span>
             </Link>
           </div>
           <div className="flex py-1">
@@ -83,9 +83,7 @@ export default function Footer() {
           </p>
         </div>
       </div>
-      <div>
-        <Map />
-      </div>
+      <Map />
     </footer>
   );
 }

@@ -6,9 +6,9 @@ import { Marker, Popup } from "react-leaflet";
 
 export default function Map() {
   return (
-    <div>
+    <>
       <MapContainer
-        className="map-container w-[250px] h-[250px]"
+        className="map-container w-[100%] h-[100%] lg:w-[250px] h-[250px] m-4"
         center={[50.893123, 34.84068]}
         zoom={17}
         scrollWheelZoom={true}
@@ -31,6 +31,6 @@ export default function Map() {
           </Popup>
         </Marker>
       </MapContainer>
-    </div>
+    </>
   );
 }
