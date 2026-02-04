@@ -11,16 +11,16 @@ export default function SiteInBrowser() {
           width={30}
           height={30}
         />
-        <div className="hidden flex">
+        <div className="hidden md:flex">
           <div className="w-[3rem] h-[20px] rounded-[0.5rem] bg-[#919191] mx-2"></div>
           <div className="w-[4rem] h-[20px] rounded-[0.5rem] bg-[#919191] mx-2"></div>
           <div className="w-[3rem] h-[20px] rounded-[0.5rem] bg-[#919191] mx-2"></div>
           <div className="w-[4rem] h-[20px] rounded-[0.5rem] bg-[#919191] mx-2"></div>
         </div>
-        <div className="w-[2rem] h-[24px] rounded-[0.5rem] bg-[#919191] mx-2"></div>
+        <div className="block md:hidden w-[2rem] h-[24px] rounded-[0.5rem] bg-[#919191] mx-2"></div>
       </div>
-      <div className="flex flex-wrap p-8 justify-center sm:justify-between items-start h-auto">
-        <div className="mt-4 ms:mt-[4rem]">
+      <div className="flex flex-col sm:flex-row p-8 justify-center md:justify-between items-start h-auto">
+        <div className="mx-auto mt-4 md:mx-0 sm:mt-[4rem]">
           <div className="w-[7rem] h-[24px] rounded-[0.5rem] bg-[#919191]"></div>
           <div className="w-[12rem] h-[20px] rounded-[0.5rem] bg-[#919191] my-6"></div>
           <div className="flex">
@@ -30,7 +30,7 @@ export default function SiteInBrowser() {
           </div>
         </div>
         <Image
-          className="my-[1.5rem]"
+          className="mx-auto md:mx-0 my-[1.5rem] "
           src="/picture.svg"
           alt="Picture"
           width={200}
