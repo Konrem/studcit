@@ -8,7 +8,7 @@ export default function Map() {
   return (
     <>
       <MapContainer
-        className="map-container w-[100%] h-[100%] lg:w-[250px] h-[250px] m-4"
+        className="map-container w-[100%] h-[100%] lg:w-[250px] xl:w-[500px] h-[250px] m-4"
         center={[50.893123, 34.84068]}
         zoom={17}
         scrollWheelZoom={true}
@@ -23,7 +23,7 @@ export default function Map() {
             iconSize: [36, 36],
             iconAnchor: [18, 36],
             className: "mymarker",
-            html: "<img src='/marker-icon.png' />",
+            html: `<img src="/marker-icon.png" />`,
           })}
         >
           <Popup>

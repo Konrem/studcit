@@ -6,72 +6,101 @@ import Map from "../ui/Map";
 export default function Footer() {
   const socials = [
     {
-      icon: "/test.svg",
+      icon: "/social/telegram.svg",
       title: "Telegram",
       link: "#",
+      hover: "bg-blue-400",
     },
     {
-      icon: "/test.svg",
+      icon: "/social/facebook.svg",
       title: "Facebook",
       link: "#",
+      hover: "bg-blue-500",
     },
     {
-      icon: "/test.svg",
-      title: "Instagram",
-      link: "#",
-    },
-    {
-      icon: "/test.svg",
+      icon: "/social/linkedin.svg",
       title: "LinkedIn",
       link: "#",
+      hover: "bg-[#006699]",
     },
     {
-      icon: "/test.svg",
+      icon: "/social/github.svg",
       title: "Github",
       link: "#",
+      hover: "bg-white",
+    },
+    {
+      icon: "/social/instagram.svg",
+      title: "Instagram",
+      link: "#",
+      hover: "bg-gradient-to-bl from-purple-500 via-pink-500 to-yellow-500",
+    },
+    {
+      icon: "/social/whatsapp.svg",
+      title: "Whatsapp",
+      link: "#",
+      hover: "bg-green-400",
+    },
+    {
+      icon: "/social/viber.svg",
+      title: "Viber",
+      link: "#",
+      hover: "bg-fuchsia-700",
+    },
+    {
+      icon: "/social/youtube.svg",
+      title: "Youtube",
+      link: "#",
+      hover: "bg-[#FF3000]",
     },
   ];
+
+  const sizeIconSocial= 25;
   return (
     <footer
       id="footer"
       className="container flex item-center flex-wrap justify-between p-8 mx-auto"
     >
       <div>
-        <div className="p-4">
+        <div className="mt-4 mx-4">
           <div className="flex py-1">
             <Link href="tel:+380985252165">
               <Image
-                className="dark:invert mr-3 inline-block"
-                src="/test.svg"
-                alt="Icon"
+                className="mr-3 inline-block"
+                src="/social/telephone.svg"
+                alt="Telephone"
                 width={25}
                 height={25}
               />
-              <span className="fw-medium text-xl">+38(098) 525-2165</span>
+              <span className="fw-medium text-xl">+38(098) 525-21-65</span>
             </Link>
           </div>
           <div className="flex py-1">
             <Link href="mailto:studcit@gmail.com">
               <Image
-                className="dark:invert mr-3 inline-block"
-                src="/test.svg"
-                alt="Icon"
+                className="mr-3 inline-block"
+                src="/social/email.svg"
+                alt="Email"
                 width={25}
                 height={25}
               />
               <span className="fw-medium text-xl">studcit@gmail.com</span>
             </Link>
           </div>
-          <div className="flex py-2">
+        </div>
+        <div className="mx-2 mt-2">
+          <div className="flex">
             {socials.map((social, index) => (
               <div key={index}>
                 <SocialBtn
                   icon={social.icon}
                   title={social.title}
                   link={social.link}
+                  hover={social.hover}
+                  size={sizeIconSocial}
                 />
               </div>
-            ))}
+            ))}        
           </div>
         </div>
         <div className="p-4 mt-4">
@@ -79,7 +108,7 @@ export default function Footer() {
             Україна, Суми, вул. Римського-Корсакова, 2
           </p>
           <p className="fw-medium text-xl">
-            Сумський Державний Університет, ЕТ корпус, каб. ЕТ-504{" "}
+            Сумський Державний Університет, ЕТ корпус, каб. ЕТ-504
           </p>
         </div>
       </div>

@@ -5,7 +5,7 @@ export default function Card(props: { icon: string; title: string; subtitle: str
     <div className="relative drop-shadow-xl w-45 h-60 overflow-hidden rounded-xl bg-[#3d3c3d]">
       <div className="absolute flex flex-col items-center justify-center p-4 text-white z-[1] opacity-90 rounded-xl inset-0.5 bg-[#323132]">
         <Image
-            className="dark:invert my-[1.5rem]"
+            className="my-[1.5rem]"
             src={props.icon}
             alt={props.title}
             width={50}

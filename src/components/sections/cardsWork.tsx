@@ -3,33 +3,33 @@ import Card from "../ui/card";
 export default function AboutCards() {
   const cardsWork = [
     {
-      icon: "/test.svg",
+      icon: "/cards/star.svg",
       title: "Талановиті фахівці",
       subtitle: "Досвідчена команда професіоналів",
     },
     {
-      icon: "/test.svg",
+      icon: "/cards/trending.svg",
       title: "Постійний розвиток",
       subtitle: "Постійно вдосконалюємо свої навички",
     },
     {
-      icon: "/test.svg",
+      icon: "/cards/mind.svg",
       title: "Індивідуальний підхід",
       subtitle: "Враховуємо особливості і потреби клієнта",
     },
     {
-      icon: "/test.svg",
+      icon: "/cards/lightbulb.svg",
       title: "Креативні рішення",
       subtitle: "Знаходимо нестандартні підходи",
     },
     {
-      icon: "/test.svg",
+      icon: "/cards/warranty.svg",
       title: "Гарантія якісної роботи",
       subtitle: "Ретельно тестуємо кожний проєкт",
     },
   ];
   return (
-    <div className="mt-[5rem]" id="about">
+    <div className="mt-[3rem] lg:mt-[5rem]" id="about">
       <div className="text-center pb-4">
         <h2 className="font-bold text-3xl md:text-5xl">СтудЦІТ - це</h2>
         <p className="font-medium text-xl py-4">

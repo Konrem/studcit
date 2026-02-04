@@ -1,8 +1,11 @@
-import Loader from "./loader";
+import Header from "../sections/header";
+import Test from "../test";
+import SiteInBrowser from "./siteInBrowser";
+import Loader from "./siteInBrowser";
 
 export default function Browser() {
   return (
-    <div className="relative flex h-[350px] w-[35em] flex-col overflow-hidden rounded-[7px] bg-neutral-300 shadow-[5px_5px_10px_rgba(31,31,31,0.245)]">
+    <div className="relative flex h-[400px] max-w-[35rem] w-full flex-col overflow-hidden rounded-[7px] bg-neutral-300 shadow-[5px_5px_10px_rgba(31,31,31,0.245)]">
       <div>
         <div className="flex h-[40px] items-end justify-between bg-[#353535] pl-5">
           <div className="relative h-[34px] w-[100px] rounded-t-[7px] bg-[#515151] px-2 pt-1">
@@ -65,7 +68,8 @@ export default function Browser() {
         </div>
       </div>
       <div className="py-5">
-        <Loader />
+        {/* <Loader /> */}
+        <SiteInBrowser />
       </div>
     </div>
   );

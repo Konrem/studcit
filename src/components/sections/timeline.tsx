@@ -3,40 +3,42 @@ import TimelineBlock from "../ui/timeline-block";
 export default function Timeline() {
   const timeline = [
     {
-      icon: "/test.svg",
+      icon: "/timeline/target.svg",
       title: "Аналіз",
       description:
-        "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.",
+        "Визначаємо цілі проєкту, цільову аудиторію та ключові задачі. Аналізуємо вимоги, контент і технічні обмеження, щоб сформувати чітке бачення майбутнього сайту.",
     },
     {
-      icon: "/test.svg",
+      icon: "/timeline/pencil.svg",
       title: "Проєктування",
       description:
-        "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.",
+        "Створюємо структуру сайту, продумуємо логіку навігації та взаємодію користувача з інтерфейсом. Формуємо прототип, який відображає основні сценарії використання.",
     },
     {
-      icon: "/test.svg",
+      icon: "/timeline/pen-file.svg",
       title: "Дизайн",
       description:
-        "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.",
+        "Розробляємо візуальний стиль, підбираємо кольори, шрифти та компоненти інтерфейсу. Дизайн узгоджується з цілями проєкту та підкреслює його характер.",
     },
     {
-      icon: "/test.svg",
+      icon: "/timeline/code-desktop.svg",
       title: "Веб-розробка",
       description:
-        "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.",
+        "Реалізуємо дизайн у коді, налаштовуємо адаптивність, інтегруємо необхідний функціонал та сервіси. Забезпечуємо коректну роботу на різних пристроях.",
     },
     {
-      icon: "/test.svg",
+      icon: "/timeline/rocket.svg",
       title: "Запуск",
       description:
-        "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.",
+        "Перевіряємо сайт, оптимізуємо швидкість та публікуємо проєкт. Після запуску можливі доопрацювання та подальший розвиток ресурсу.",
     },
   ];
 
   return (
-    <div className="mt-[5em]" id="how-we-work">
-      <h2 className="font-bold text-center mb-10 text-3xl md:text-5xl">Як ми працюємо?</h2>
+    <div className="mt-[3rem] lg:mt-[5rem]" id="how-we-work">
+      <h2 className="font-bold text-center mb-10 text-3xl md:text-5xl">
+        Як ми працюємо?
+      </h2>
       <ul className="relative before:absolute before:top-0 before:left-[1.4rem] pl-[2rem] pr-4 sm:before:left-[2.4rem] sm:px-[3rem] lg:before:left-1/2 before:h-full before:w-0.5 before:-translate-x-1/2 before:rounded-full before:bg-black overflow-hidden">
         {timeline.map((block, index) => (
           <li

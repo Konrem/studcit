@@ -13,7 +13,7 @@ export default function TimelineBlock(props: { icon: string; title: string; desc
         />
         <span className="font-bold text-xl md:text-2xl">{props.title}</span>
       </div>
-      <p className="text-base text-justify">{props.description}</p>
+      <p className="text-text-base text-justify">{props.description}</p>
     </div>
   );
 }
