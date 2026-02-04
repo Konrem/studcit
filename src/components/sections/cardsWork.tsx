@@ -36,7 +36,7 @@ export default function AboutCards() {
           не тільки спеціалісти, які отримують вищу, а також
         </p>
       </div>
-      <div className="container mx-auto flex justify-around flex-wrap gap-8 lg:flex-nowrap lg:gap-2">
+      <div className="container mx-auto flex justify-center lg:justify-around flex-wrap gap-8 lg:flex-nowrap lg:gap-2">
         {cardsWork.map((card, index) => (
           <div key={index}>
             <Card

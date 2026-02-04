@@ -44,7 +44,7 @@ export default function Main() {
       </div>
       <div className="flex flex-wrap gap-8 lg:flex-nowrap items-start justify-center">
         <Browser />
-        <div className="lg:ml-[2rem]">
+        <div>
           <Console />
           <div className="my-6">
             <div className="flex">

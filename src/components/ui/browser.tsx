@@ -1,13 +1,10 @@
-import Header from "../sections/header";
-import Test from "../test";
 import SiteInBrowser from "./siteInBrowser";
-import Loader from "./siteInBrowser";
 
 export default function Browser() {
   return (
-    <div className="relative flex h-[400px] max-w-[35rem] w-full flex-col overflow-hidden rounded-[7px] bg-neutral-300 shadow-[5px_5px_10px_rgba(31,31,31,0.245)]">
+    <div className="relative flex mx-6 sm:m-0 h-[500px] sm:h-[400px] max-w-[35rem] w-full flex-col overflow-hidden rounded-[7px] bg-neutral-300 shadow-[5px_5px_10px_rgba(31,31,31,0.245)]">
       <div>
-        <div className="flex h-[40px] items-end justify-between bg-[#353535] pl-5">
+        <div className="hidden sm:flex h-[40px] items-end justify-between bg-[#353535] pl-5">
           <div className="relative h-[34px] w-[100px] rounded-t-[7px] bg-[#515151] px-2 pt-1">
             <div className="flex items-start justify-between gap-1">
               <span className="text-[10px] text-white">My project</span>
@@ -38,14 +35,14 @@ export default function Browser() {
           </div>
         </div>
 
-        <div className="absolute top-[30px] flex h-[40px] w-full items-center gap-[5px] rounded-t-[7px] bg-[#515151] p-[7px]">
-          <button className="h-[25px] w-[27px] rounded-full text-white hover:bg-[#5d5d5d]">
+        <div className="absolute top-0 sm:top-[30px] flex h-[40px] w-full items-center gap-[5px] rounded-t-[7px] bg-[#515151] p-[7px]">
+          <button className="hidden sm:block  h-[25px] w-[27px] rounded-full text-white hover:bg-[#5d5d5d]">
             ←
           </button>
 
           <button
             disabled
-            className="h-[25px] w-[27px] rounded-full text-white opacity-40"
+            className="hidden sm:block  h-[25px] w-[27px] rounded-full text-white opacity-40"
           >
             →
           </button>
@@ -67,7 +64,7 @@ export default function Browser() {
           </div>
         </div>
       </div>
-      <div className="py-5">
+      <div className="py-8 sm:py-5">
         {/* <Loader /> */}
         <SiteInBrowser />
       </div>

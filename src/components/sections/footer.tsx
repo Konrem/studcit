@@ -89,9 +89,9 @@ export default function Footer() {
           </div>
         </div>
         <div className="mx-2 mt-2">
-          <div className="flex">
+          <div className="flex flex-wrap">
             {socials.map((social, index) => (
-              <div key={index}>
+              <div className="mr-2 mb-2 md:m-0" key={index}>
                 <SocialBtn
                   icon={social.icon}
                   title={social.title}
