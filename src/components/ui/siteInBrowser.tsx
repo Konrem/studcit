@@ -7,7 +7,7 @@ export default function SiteInBrowser() {
         <Image
           className="my-2"
           src="/picture.svg"
-          alt="Picture"
+          alt="logo inside"
           width={30}
           height={30}
         />
@@ -32,7 +32,7 @@ export default function SiteInBrowser() {
         <Image
           className="mx-auto md:mx-0 my-[1.5rem] "
           src="/picture.svg"
-          alt="Picture"
+          alt="Picture inside"
           width={200}
           height={200}
         />

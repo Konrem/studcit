@@ -4,6 +4,7 @@ import AboutCards from "@/components/sections/cardsWork";
 import Timeline from "@/components/sections/timeline";
 import Info from "@/components/sections/info";
 import SocialBtn from "../ui/socialBtn";
+import RevealBlock from "../ui/animate/revealBlock";
 
 export default function Main() {
   const socials = [
@@ -37,7 +38,7 @@ export default function Main() {
   return (
     <div className="dark:bg-[var(--bg-main)] dark:text-[var(--text-primary)] py-[5rem]">
       <div className="text-center pb-4">
-        <h2 className="font-semibold text-5xl tracking-tight">StudCIT.com</h2>
+        <h1 className="font-semibold text-5xl tracking-tight">StudCIT.com</h1>
         <p className="font-medium text-xl line-height-[1.5] py-4">
           Поки ти дивишся сайт, ми його уже робимо
         </p>
@@ -49,7 +50,7 @@ export default function Main() {
           <div className="my-6">
             <div className="flex">
               {socials.map((social, index) => (
-                <div key={index}>
+                <RevealBlock key={index} delay={index * 100}>
                   <SocialBtn
                     icon={social.icon}
                     title={social.title}
@@ -57,7 +58,7 @@ export default function Main() {
                     hover={social.hover}
                     size={sizeIconTech}
                   />
-                </div>
+                </RevealBlock>
               ))}
             </div>
           </div>

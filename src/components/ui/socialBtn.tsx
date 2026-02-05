@@ -22,7 +22,7 @@ export default function SocialBtn(props: {
       <Image
         className={`z-10 inline-block duration-500 group-hover:scale-115 ${iconColor}`}
         src={props.icon}
-        alt={props.title}
+        alt=""
         width={props.size}
         height={props.size}
       />

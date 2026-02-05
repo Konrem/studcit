@@ -1,3 +1,4 @@
+import RevealBlock from "../ui/animate/revealBlock";
 import Card from "../ui/card";
 
 export default function AboutCards() {
@@ -38,13 +39,13 @@ export default function AboutCards() {
       </div>
       <div className="container mx-auto flex justify-center lg:justify-around flex-wrap gap-8 lg:flex-nowrap lg:gap-2">
         {cardsWork.map((card, index) => (
-          <div key={index}>
+          <RevealBlock key={index} delay={index * 150}>
             <Card
               icon={card.icon}
               title={card.title}
               subtitle={card.subtitle}
             />
-          </div>
+          </RevealBlock>
         ))}
       </div>
     </div>

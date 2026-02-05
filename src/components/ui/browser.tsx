@@ -65,7 +65,6 @@ export default function Browser() {
         </div>
       </div>
       <div className="py-8 sm:py-5">
-        {/* <Loader /> */}
         <SiteInBrowser />
       </div>
     </div>

@@ -7,7 +7,7 @@ export default function TimelineBlock(props: { icon: string; title: string; desc
         <Image
             className="mr-3"
             src={props.icon}
-            alt={props.title}
+            alt=""
             width={50}
             height={50}
         />

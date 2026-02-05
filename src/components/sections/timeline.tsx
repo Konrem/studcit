@@ -1,3 +1,4 @@
+import RevealBlock from "../ui/animate/revealBlock";
 import TimelineBlock from "../ui/timeline-block";
 
 export default function Timeline() {
@@ -51,11 +52,13 @@ export default function Timeline() {
               <div
                 className={`size-3 ml-[20px] sm:ml-[110px] lg:ml-0 mt-9 ${index % 2 === 0 ? "lg:ml-[110px]" : "lg:mr-[110px]"} shrink-0 rounded-full bg-black`}
               ></div>
+              <RevealBlock delay={200} direction={index % 2 === 0 ? 'left' : 'right'}>
               <TimelineBlock
                 icon={block.icon}
                 title={block.title}
                 description={block.description}
               />
+            </RevealBlock>
             </div>
             <div className="hidden lg:block" aria-hidden="true"></div>
           </li>

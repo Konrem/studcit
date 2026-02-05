@@ -27,6 +27,7 @@ export default function Info() {
       {infoCards.map((card, index) => (
         <CardInfo
           key={index}
+          index={index}
           image={card.image}
           title={card.title}
           description={card.description}

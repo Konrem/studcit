@@ -7,7 +7,7 @@ export default function Card(props: { icon: string; title: string; subtitle: str
         <Image
             className="my-[1.5rem]"
             src={props.icon}
-            alt={props.title}
+            alt=""
             width={50}
             height={50}
         />
