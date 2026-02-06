@@ -5,6 +5,7 @@ import Timeline from "@/components/sections/timeline";
 import Info from "@/components/sections/info";
 import SocialBtn from "../ui/socialBtn";
 import RevealBlock from "../ui/animate/revealBlock";
+import Form from "../ui/form";
 
 export default function Main() {
   const socials = [
@@ -67,6 +68,7 @@ export default function Main() {
       <Info />
       <AboutCards />
       <Timeline />
+      <Form />
     </div>
   );
 }

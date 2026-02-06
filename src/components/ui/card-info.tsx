@@ -8,7 +8,7 @@ export default function CardInfo(props: { index: number; image: string; title: s
         <Image src={props.image} alt="" width={500} height={300} />
       </RevealBlock>
       <RevealBlock direction={props.index % 2 === 1 ? 'left' : 'right'}>
-        <div className="max-w-[32em] ms:mx-8">
+        <div className="max-w-[32em] sm:mx-8">
           <h3 className="font-semibold text-2xl mb-4 ms:mb-6 text-center">
             {props.title}
           </h3>

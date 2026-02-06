@@ -7,7 +7,7 @@ import emailjs from "@emailjs/browser";
 export default function ContactForm() {
   const [userInput, setUserInput] = useState({
     name: "",
-    email: "",
+    contact: "",
     message: "",
   });
 
@@ -27,64 +27,78 @@ export default function ContactForm() {
 
     try {
       await emailjs.send(serviceID, templateID, userInput, userID);
-      toast.success("Message sent successfully!");
-      setUserInput({ name: "", email: "", message: "" });
+      toast.success("Заявка залишена успішно!");
+      setUserInput({ name: "", contact: "", message: "" });
     } catch (err) {
-      toast.error("Failed to send message");
+      toast.error("Виникла помилка під час відправлення!");
       console.error(err);
     }
   };
 
   return (
-    <form onSubmit={handleSubmit}>
-      <label
-        htmlFor="first_name"
-        className="block mb-2.5 text-sm font-medium text-heading"
-      >
-        First name
-      </label>
-      <input
-        name="first_name"
-        className="bg-neutral-secondary-medium border border-default-medium text-heading text-sm rounded-base focus:ring-brand focus:border-brand block w-full px-3 py-2.5 shadow-xs placeholder:text-body"
-        placeholder="Name"
-        required
-        value={userInput.name}
-        onChange={handleChange}
-      />
+    <div className="container mt-[5rem] mx-auto flex justify-center flex-col">
+      <div className="text-center pb-4">
+        <h2 className="font-bold text-2xl md:text-3xl">
+          Не знаєте з чого почати?
+        </h2>
+        <p className="font-medium text-xl py-4">
+          Залиште заявку, і ми напишемо або зателефонуємо?
+        </p>
+      </div>
+      <div className="mx-4 flex align-start">
+        <form onSubmit={handleSubmit} className="min-w-[24rem] mx-auto">
+          <label
+            htmlFor="name"
+            className="block mb-1 font-semibold text-sm text-heading"
+          >
+            Ваше Ім&apos;я
+          </label>
+          <input
+            name="name"
+            className="bg-neutral-secondary-medium w-full border border-default-medium text-heading text-sm rounded-base focus:ring-brand focus:border-brand block w-full py-2 px-3 shadow-xs placeholder:text-body"
+            placeholder="Ім'я"
+            required
+            value={userInput.name}
+            onChange={handleChange}
+          />
 
-      <label
-        htmlFor="email"
-        className="block mb-2.5 text-sm font-medium text-heading"
-      >
-        Email address
-      </label>
-      <input
-        name="email"
-        className="bg-neutral-secondary-medium border border-default-medium text-heading text-sm rounded-base focus:ring-brand focus:border-brand block w-full px-3 py-2.5 shadow-xs placeholder:text-body"
-        placeholder="email@company.com"
-        required
-        value={userInput.email}
-        onChange={handleChange}
-      />
-      <label
-        htmlFor="message"
-        className="block mb-2.5 text-sm font-medium text-heading"
-      >
-        Your message
-      </label>
-      <textarea
-        name="message"
-        className="bg-neutral-secondary-medium border border-default-medium text-heading text-sm rounded-base focus:ring-brand focus:border-brand block w-full p-3.5 shadow-xs placeholder:text-body"
-        placeholder="Your text"
-        value={userInput.message}
-        onChange={handleChange}
-      />
-      <button
-        type="submit"
-        className="text-white bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded"
-      >
-        Submit
-      </button>
-    </form>
+          <label
+            htmlFor="contact"
+            className="block mt-3 mb-1 font-semibold text-sm text-heading"
+          >
+            Як з Вами зв&apos;язатися?
+          </label>
+          <input
+            name="contact"
+            className="bg-neutral-secondary-medium border border-default-medium text-heading text-sm rounded-base focus:ring-brand focus:border-brand block w-full py-2 px-3 shadow-xs placeholder:text-body"
+            placeholder="Електронна пошта чи телефон"
+            required
+            value={userInput.contact}
+            onChange={handleChange}
+          />
+          <label
+            htmlFor="message"
+            className="block mt-3 mb-1 font-semibold text-sm text-heading"
+          >
+            Ваше побажання, як і коли з вами краще зв&apos;язатися
+          </label>
+          <textarea
+            name="message"
+            className="bg-neutral-secondary-medium border border-default-medium text-heading text-sm rounded-base focus:ring-brand focus:border-brand block w-full py-2 px-3 shadow-xs placeholder:text-body"
+            placeholder="Ваше повідомлення, контакти чи інші дані"
+            value={userInput.message}
+            onChange={handleChange}
+          />
+          <div className="flex justify-center">
+            <button
+              type="submit"
+              className="mt-5 text-white bg-neutral-700 hover:bg-neutral-900 px-4 py-2 rounded"
+            >
+              Подати заявку
+            </button>
+          </div>
+        </form>
+      </div>
+    </div>
   );
 }
