@@ -36,7 +36,7 @@ export default function ContactForm() {
   };
 
   return (
-    <div className="container mt-[5rem] mx-auto flex justify-center flex-col">
+    <div className="container mt-[5rem] mx-auto flex justify-center flex-col" id="form">
       <div className="text-center pb-4">
         <h2 className="font-bold text-2xl md:text-3xl">
           Не знаєте з чого почати?
@@ -46,7 +46,7 @@ export default function ContactForm() {
         </p>
       </div>
       <div className="mx-4 flex align-start">
-        <form onSubmit={handleSubmit} className="min-w-[24rem] mx-auto">
+        <form onSubmit={handleSubmit} className="md:min-w-[24rem] mx-auto">
           <label
             htmlFor="name"
             className="block mb-1 font-semibold text-sm text-heading"
@@ -85,7 +85,7 @@ export default function ContactForm() {
           <textarea
             name="message"
             className="bg-neutral-secondary-medium border border-default-medium text-heading text-sm rounded-base focus:ring-brand focus:border-brand block w-full py-2 px-3 shadow-xs placeholder:text-body"
-            placeholder="Ваше повідомлення, контакти чи інші дані"
+            placeholder="Ваше повідомлення"
             value={userInput.message}
             onChange={handleChange}
           />

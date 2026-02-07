@@ -1,6 +1,6 @@
 export default function Console() {
   return (
-    <div className="max-w-[35rem] md:w-full h-[20rem] md:h-[15rem] bg-[#1a1a1a] rounded-[1rem] overflow-hidden flex flex-col shadow-[0_10px_30px_rgba(0,0,0,0.15)]">
+    <div className="max-w-[35rem] mx-6 sm:mx-0 md:w-full h-[20rem] md:h-[15rem] bg-[#1a1a1a] rounded-[1rem] overflow-hidden flex flex-col shadow-[0_10px_30px_rgba(0,0,0,0.15)]">
       <div className="h-[2.5rem] bg-[#515151] flex items-center px-[1rem]">
         <div className="flex gap-[0.5rem]">
           <div className="w-[0.75rem] h-[0.75rem] rounded-full bg-[#FF3B30] hover:scale-110 active:scale-95 transition-transform duration-200"></div>
