@@ -1,7 +1,7 @@
 "use client";
 
 import { useState, ChangeEvent, FormEvent } from "react";
-import { toast } from "react-toastify";
+import { ToastContainer, toast } from "react-toastify";
 import emailjs from "@emailjs/browser";
 
 export default function ContactForm() {
@@ -27,16 +27,40 @@ export default function ContactForm() {
 
     try {
       await emailjs.send(serviceID, templateID, userInput, userID);
-      toast.success("Заявка залишена успішно!");
+      toast.success("Заявка залишена успішно!", {
+        position: "top-right",
+        autoClose: 5000,
+        hideProgressBar: true,
+        closeOnClick: true,
+        pauseOnHover: true,
+        draggable: true,
+        progress: undefined,
+        theme: "dark",
+      });
       setUserInput({ name: "", contact: "", message: "" });
     } catch (err) {
-      toast.error("Виникла помилка під час відправлення!");
+      toast.error(
+        "Виникла помилка під час відправлення! Спробуйте пізніше або написати нам за контактами внизу.",
+        {
+          position: "top-right",
+          autoClose: 5000,
+          hideProgressBar: true,
+          closeOnClick: true,
+          pauseOnHover: true,
+          draggable: true,
+          progress: undefined,
+          theme: "dark",
+        },
+      );
       console.error(err);
     }
   };
 
   return (
-    <div className="container mt-[5rem] mx-auto flex justify-center flex-col" id="form">
+    <div
+      className="container mt-[5rem] mx-auto flex justify-center flex-col"
+      id="form"
+    >
       <div className="text-center pb-4">
         <h2 className="font-bold text-2xl md:text-3xl">
           Не знаєте з чого почати?
@@ -99,6 +123,7 @@ export default function ContactForm() {
           </div>
         </form>
       </div>
+      <ToastContainer />
     </div>
   );
 }
