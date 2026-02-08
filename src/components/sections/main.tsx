@@ -37,7 +37,7 @@ export default function Main() {
   const sizeIconTech = 100;
 
   return (
-    <div className="dark:bg-[var(--bg-main)] dark:text-[var(--text-primary)] py-[5rem]">
+    <div className="dark:bg-[var(--bg-main)] dark:text-[var(--text-primary)] py-[5rem] overflow-hidden">
       <div className="text-center pb-4">
         <h1 className="font-semibold text-5xl tracking-tight">StudCIT.com</h1>
         <p className="font-medium text-xl line-height-[1.5] py-4">

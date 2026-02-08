@@ -2,7 +2,6 @@
 
 import Image from "next/image";
 import NavBtn from "../ui/navBtn";
-import Link from "next/link";
 import { useState } from "react";
 
 export default function Header() {

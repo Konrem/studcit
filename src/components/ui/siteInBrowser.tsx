@@ -3,7 +3,7 @@ import Image from "next/image";
 export default function SiteInBrowser() {
   return (
     <div className="mx-auto mt-2">
-      <div className="w-[100%] bg-[#434343] flex justify-between items-center px-8">
+      <div className="w-[100%] bg-neutral-700 flex justify-between items-center px-8">
         <Image
           className="my-2"
           src="/picture.svg"

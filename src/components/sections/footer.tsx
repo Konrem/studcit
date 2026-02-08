@@ -72,7 +72,7 @@ export default function Footer() {
                 width={25}
                 height={25}
               />
-              <span className="fw-medium text-xl">+38(098) 525-21-65</span>
+              <span className="fw-medium text-base md:text-xl">+38(098) 525-21-65</span>
             </Link>
           </div>
           <div className="flex py-1">
@@ -84,7 +84,7 @@ export default function Footer() {
                 width={25}
                 height={25}
               />
-              <span className="fw-medium text-xl">studcit@gmail.com</span>
+              <span className="fw-medium text-base md:text-xl">studcit@gmail.com</span>
             </Link>
           </div>
         </div>
@@ -104,10 +104,10 @@ export default function Footer() {
           </div>
         </div>
         <div className="p-4 mt-4">
-          <p className="fw-medium text-xl">
+          <p className="fw-medium text-base md:text-xl">
             Україна, Суми, вул. Римського-Корсакова, 2
           </p>
-          <p className="fw-medium text-xl">
+          <p className="fw-medium text-base md:text-xl">
             Сумський Державний Університет, ЕТ корпус, каб. ЕТ-504
           </p>
         </div>

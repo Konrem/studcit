@@ -5,7 +5,7 @@ export default function TimelineBlock(props: { icon: string; title: string; desc
     <div className="w-full lg:w-70">
       <div className="flex items-center py-4">
         <Image
-            className="mr-3"
+            className="mr-3 w-8 h-8 md:w-12 md:h-12"
             src={props.icon}
             alt=""
             width={50}
@@ -13,7 +13,7 @@ export default function TimelineBlock(props: { icon: string; title: string; desc
         />
         <span className="font-bold text-xl md:text-2xl">{props.title}</span>
       </div>
-      <p className="text-text-base text-justify">{props.description}</p>
+      <p className="text-sm md:text-base text-justify">{props.description}</p>
     </div>
   );
 }

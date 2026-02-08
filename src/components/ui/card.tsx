@@ -2,8 +2,8 @@ import Image from "next/image";
 
 export default function Card(props: { icon: string; title: string; subtitle: string; }) {
   return (
-    <div className="relative drop-shadow-xl w-40 sm:w-45 h-60 overflow-hidden rounded-xl bg-[#3d3c3d]">
-      <div className="absolute flex flex-col items-center justify-center p-4 text-white z-[1] opacity-90 rounded-xl inset-0.5 bg-[#323132]">
+    <div className="relative drop-shadow-xl w-40 sm:w-45 h-60 overflow-hidden rounded-xl bg-gray-500">
+      <div className="absolute flex flex-col items-center justify-center p-4 text-white z-[1] opacity-90 rounded-xl inset-0.5 bg-neutral-800">
         <Image
             className="my-[1.5rem]"
             src={props.icon}
