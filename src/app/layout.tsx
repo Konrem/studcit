@@ -21,6 +21,7 @@ export default function RootLayout({
     <html lang="ua">
       <body
         className={`${inter.variable} antialiased`}
+        data-theme="light"
       >
         {children}
       </body>

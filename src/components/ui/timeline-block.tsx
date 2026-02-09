@@ -5,7 +5,7 @@ export default function TimelineBlock(props: { icon: string; title: string; desc
     <div className="w-full lg:w-70">
       <div className="flex items-center py-4">
         <Image
-            className="mr-3 w-8 h-8 md:w-12 md:h-12"
+            className="mr-3 w-8 h-8 md:w-12 md:h-12 invert-[var(--invert)]"
             src={props.icon}
             alt=""
             width={50}

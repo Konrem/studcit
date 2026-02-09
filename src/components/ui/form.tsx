@@ -66,7 +66,7 @@ export default function ContactForm() {
           Не знаєте з чого почати?
         </h2>
         <p className="font-medium text-xl py-4 text-balance mx-2">
-          Залиште заявку, і ми напишемо або зателефонуємо?
+          Залиште заявку, і ми напишемо або зателефонуємо
         </p>
       </div>
       <div className="mx-4 flex align-start">
@@ -79,7 +79,7 @@ export default function ContactForm() {
           </label>
           <input
             name="name"
-            className="bg-neutral-secondary-medium w-full border border-default-medium text-heading text-sm rounded focus:ring-brand focus:border-brand block w-full py-2 px-3 shadow-xs placeholder:text-body"
+            className="w-full border border-default-medium border-neutral-400 text-heading text-sm rounded focus:ring-brand focus:border-brand block w-full py-2 px-3 placeholder:text-body"
             placeholder="Ім'я"
             required
             value={userInput.name}
@@ -94,7 +94,7 @@ export default function ContactForm() {
           </label>
           <input
             name="contact"
-            className="bg-neutral-secondary-medium border border-default-medium text-heading text-sm rounded focus:ring-brand focus:border-brand block w-full py-2 px-3 shadow-xs placeholder:text-body"
+            className="border border-default-medium border-neutral-400 text-heading text-sm rounded focus:ring-brand focus:border-brand block w-full py-2 px-3 placeholder:text-body"
             placeholder="Електронна пошта чи телефон"
             required
             value={userInput.contact}
@@ -108,7 +108,7 @@ export default function ContactForm() {
           </label>
           <textarea
             name="message"
-            className="bg-neutral-secondary-medium border border-default-medium text-heading text-sm rounded focus:ring-brand focus:border-brand block w-full py-2 px-3 shadow-xs placeholder:text-body"
+            className="border border-default-medium border-neutral-400 text-heading text-sm rounded focus:ring-brand focus:border-brand block w-full py-2 px-3 placeholder:text-body"
             placeholder="Ваше повідомлення"
             value={userInput.message}
             onChange={handleChange}
