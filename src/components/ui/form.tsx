@@ -62,9 +62,7 @@ export default function ContactForm() {
       id="form"
     >
       <div className="text-center pb-4">
-        <h2 className="font-bold text-3xl">
-          Не знаєте з чого почати?
-        </h2>
+        <h2 className="font-bold text-3xl">Не знаєте з чого почати?</h2>
         <p className="font-medium text-xl py-4 text-balance mx-2">
           Залиште заявку, і ми напишемо або зателефонуємо
         </p>
@@ -116,9 +114,16 @@ export default function ContactForm() {
           <div className="flex justify-center">
             <button
               type="submit"
-              className="mt-5 text-white bg-neutral-700 hover:bg-neutral-900 px-4 py-2 rounded"
+              className="mt-5 cursor-pointer relative rounded group overflow-hidden border-2 px-8 py-2 border-orange-600"
             >
-              Подати заявку
+              <span className="font-bold text-white text-xl relative z-10 group-hover:text-orange-500 duration-500">
+                Подати заявку
+              </span>
+              <span className="absolute top-0 left-0 w-full bg-orange-600 duration-500 group-hover:-translate-x-full h-full"></span>
+              <span className="absolute top-0 left-0 w-full bg-orange-600 duration-500 group-hover:translate-x-full h-full"></span>
+
+              <span className="absolute top-0 left-0 w-full bg-orange-600 duration-500 delay-300 group-hover:-translate-y-full h-full"></span>
+              <span className="absolute delay-300 top-0 left-0 w-full bg-orange-600 duration-500 group-hover:translate-y-full h-full"></span>
             </button>
           </div>
         </form>

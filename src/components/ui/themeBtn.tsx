@@ -22,14 +22,14 @@ export default function ThemeToggle({ changeTheme }: { changeTheme: any }) {
       onClick={toggleTheme}
     >
       <Image
-        className={`z-10 transition-discrete transition-all duration-500 ease-out ${theme === "light" ? "absolute invert collapse group-hover:opacity-100 group-hover:visible translate-x-10 -translate-y-3 group-hover:translate-x-0 group-hover:translate-y-0" : "inline-block translate-x-0 translate-y-0 group-hover:-translate-x-10 group-hover:translate-y-3 group-hover:opacity-0  group-hover:invisible"}`}
+        className={`z-10 transition-discrete transition-all duration-500 ease-out ${theme === "light" ? "absolute invert collapse group-hover:opacity-100 group-hover:visible translate-x-10 -translate-y-3 group-hover:translate-x-0 group-hover:translate-y-0" : "inline-block translate-x-0 translate-y-0 group-hover:-translate-x-10 group-hover:translate-y-3 group-hover:opacity-0 group-hover:invisible"}`}
         src="/moon.svg"
         alt="Theme"
         width={25}
         height={25}
       />
       <Image
-        className={`z-10 transition-discrete transition-all duration-500 ease-out ${theme === "dark" ? "absolute invert collapse group-hover:opacity-100 group-hover:visible translate-x-10 -translate-y-3 group-hover:translate-x-0 group-hover:translate-y-0" : "inline-block translate-x-0 translate-y-0 group-hover:-translate-x-10 group-hover:translate-y-3 group-hover:opacity-0  group-hover:invisible"}`}
+        className={`z-10 transition-discrete transition-all duration-500 ease-out ${theme === "dark" ? "absolute invert collapse group-hover:opacity-100 group-hover:visible translate-x-10 -translate-y-3 group-hover:translate-x-0 group-hover:translate-y-0" : "inline-block translate-x-0 translate-y-0 group-hover:-translate-x-10 group-hover:translate-y-3 group-hover:opacity-0 group-hover:invisible"}`}
         src="/sun.svg"
         alt="Theme"
         width={25}
