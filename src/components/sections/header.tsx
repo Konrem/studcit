@@ -27,7 +27,9 @@ export default function Header() {
 
   const [isPressed, setIsPressed] = useState(false);
 
-  return (
+  const changeTheme = () => setIsPressed(!isPressed);
+  
+    return (
     <div className="bg-[var(--bg-secondary)] text-[var(--text-secondary)] border-b-1 border-neutral-700">
       <nav className="container flex item-center flex-wrap justify-between px-2 lg:px-4 mx-auto flex-row">
         <div className="logo block">
@@ -82,8 +84,8 @@ export default function Header() {
                 <NavBtn title={btn.title} link={btn.link} />
               </li>
             ))}
-            <li className="flex justify-center">
-              <ThemeToggle />
+            <li className="text-center">
+              <ThemeToggle changeTheme = {changeTheme}/>
             </li>
           </ul>
         </div>
