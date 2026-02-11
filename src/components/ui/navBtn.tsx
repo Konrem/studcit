@@ -15,7 +15,7 @@ export default function NavBtn(props: { title: string; link: string }) {
                 relative
                 hover:after:w-full
                 hover:font-bold
-                hover:text-orange-600
+                hover:text-orange-400
                 after:absolute 
                 after:left-1/2 
                 after:bottom-0

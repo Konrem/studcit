@@ -30,7 +30,7 @@ export default function Header() {
   const changeTheme = () => setIsPressed(!isPressed);
   
     return (
-    <div className="bg-[var(--bg-secondary)] text-[var(--text-secondary)] border-b-1 border-neutral-700">
+    <div className="dark-theme border-b-1 border-neutral-700">
       <nav className="container flex item-center flex-wrap justify-between px-2 lg:px-4 mx-auto flex-row">
         <div className="logo block">
           <Image
@@ -78,7 +78,7 @@ export default function Header() {
         <div
           className={`${isPressed ? "flex" : "hidden"} lg:flex w-full lg:w-auto items-center justify-center`}
         >
-          <ul className="flex flex-col lg:flex-row pb-5 lg:pb-0">
+          <ul className="flex flex-col lg:flex-row pb-3 lg:pb-0">
             {navButtons.map((btn, index) => (
               <li key={index} className="text-center">
                 <NavBtn title={btn.title} link={btn.link} />

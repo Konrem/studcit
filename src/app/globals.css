@@ -1,19 +1,19 @@
 @import "tailwindcss";
 
 :root {
-  --bg-main: #fafafa;
-  --text-primary: #0f0f0f;
-  --bg-secondary: #0f0f0f;
-  --text-secondary: #fafafa;
+  --bg-main: #E8E8E8;
+  --text-primary: #171717;
   --invert: 0;
 }
 
 [data-theme="dark"] {
-  --bg-main: #0f0f0f;
-  --text-primary: #fafafa;
-  --bg-secondary: #0f0f0f;
-  --text-secondary: #fafafa;
+  --bg-main: #171717;
+  --text-primary: #E8E8E8;
   --invert: 100%;
+}
+.dark-theme{
+  background: #171717;
+  color: #E8E8E8 ;
 }
 
 @theme inline {

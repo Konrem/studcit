@@ -11,7 +11,7 @@ export default function SocialBtn(props: {
   hover: string;
   size: number;
 }) {
-  const iconColor = (props.hover == "bg-white") ? "group-hover:dark:invert" : "";
+  const iconColor = (props.hover == "bg-white") ? "group-hover:invert" : "";
   const rounded = (props.hover !== "bg-trasparent") ? "rounded-full" : "";
   return (
     <Link

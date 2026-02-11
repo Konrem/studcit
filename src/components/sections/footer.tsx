@@ -57,7 +57,7 @@ export default function Footer() {
 
   const sizeIconSocial = 25;
   return (
-    <div className="bg-[var(--bg-secondary)] text-[var(--text-secondary)] border-t-1 border-neutral-700">
+    <div className="dark-theme border-t-1 border-neutral-700">
       <footer
         id="footer"
         className="container flex item-center flex-wrap justify-between p-8 mx-auto"
