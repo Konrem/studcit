@@ -4,6 +4,7 @@ import Image from "next/image";
 import NavBtn from "../ui/navBtn";
 import { useState } from "react";
 import ThemeToggle from "../ui/themeBtn";
+import Link from "next/link";
 
 export default function Header() {
   const navButtons = [
@@ -28,18 +29,20 @@ export default function Header() {
   const [isPressed, setIsPressed] = useState(false);
 
   const changeTheme = () => setIsPressed(!isPressed);
-  
-    return (
-    <div className="dark-theme border-b-1 border-neutral-700">
+
+  return (
+    <div className="fixed w-full z-20 dark-theme border-b-1 border-neutral-700">
       <nav className="container flex item-center flex-wrap justify-between px-2 lg:px-4 mx-auto flex-row">
         <div className="logo block">
-          <Image
-            src="/logo/logo_darkTheme.svg"
-            className="m-2 w-[200px] sm:w-[240px] h-auto"
-            alt="StudCIT logo"
-            width={240}
-            height={60}
-          />
+          <Link href="#banner">
+            <Image
+              src="/logo/logo_darkTheme.svg"
+              className="m-2 w-[200px] sm:w-[240px] h-auto"
+              alt="StudCIT logo"
+              width={240}
+              height={60}
+            />
+          </Link>
         </div>
 
         <button
@@ -84,8 +87,17 @@ export default function Header() {
                 <NavBtn title={btn.title} link={btn.link} />
               </li>
             ))}
+            {/* <li className="text-center">
+              <Link
+                href="#form"
+                type="button"
+                className="text-orange-400 hover:text-orange-600 focus:outline-none animate-pulse py-4 lg:p-2 mx-3 inline-flex flex-col items-center justify-center font-medium"
+              >
+                Подати заявку
+              </Link>
+            </li> */}
             <li className="text-center">
-              <ThemeToggle changeTheme = {changeTheme}/>
+              <ThemeToggle changeTheme={changeTheme} />
             </li>
           </ul>
         </div>

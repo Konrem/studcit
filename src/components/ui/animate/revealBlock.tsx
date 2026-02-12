@@ -33,10 +33,10 @@ export default function RevealBlock({
   }, []);
 
   const directionClass = {
-    up: 'translate-y-10',
-    down: '-translate-y-10',
-    left: 'translate-x-15',
-    right: '-translate-x-15',
+    up: 'translate-y-8',
+    down: '-translate-y-8',
+    left: 'translate-x-12',
+    right: '-translate-x-12',
   }[direction];
 
   return (

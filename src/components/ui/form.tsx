@@ -11,6 +11,8 @@ export default function ContactForm() {
     message: "",
   });
 
+  const [hiddenValue] = useState("");
+
   const handleChange = (
     e: ChangeEvent<HTMLInputElement | HTMLTextAreaElement>,
   ) => {
@@ -26,6 +28,9 @@ export default function ContactForm() {
     const userID = process.env.NEXT_PUBLIC_EMAILJS_PUBLIC_KEY!;
 
     try {
+      if (new FormData(e.currentTarget).get("phone") !== "") {
+        throw new Error("Заповнення неіснуючих даних!");
+      }
       await emailjs.send(serviceID, templateID, userInput, userID);
       toast.success("Заявка залишена успішно!", {
         position: "top-right",
@@ -68,7 +73,17 @@ export default function ContactForm() {
         </p>
       </div>
       <div className="mx-4 flex align-start">
-        <form onSubmit={handleSubmit} className="md:min-w-[24rem] mx-auto">
+        <form
+          onSubmit={handleSubmit}
+          className="md:min-w-[24rem] mx-auto relative"
+        >
+          <input
+            name="phone"
+            className="h-0 absolute -z-10"
+            tabIndex={-1}
+            value={hiddenValue}
+            onChange={handleChange}
+          />
           <label
             htmlFor="name"
             className="block mb-1 font-semibold text-sm text-heading"
@@ -79,11 +94,11 @@ export default function ContactForm() {
             name="name"
             className="w-full border border-default-medium border-neutral-400 text-heading text-sm rounded focus:ring-brand focus:border-brand block w-full py-2 px-3 placeholder:text-body"
             placeholder="Ім'я"
+            maxLength={30}
             required
             value={userInput.name}
             onChange={handleChange}
           />
-
           <label
             htmlFor="contact"
             className="block mt-3 mb-1 font-semibold text-sm text-heading"
@@ -94,6 +109,7 @@ export default function ContactForm() {
             name="contact"
             className="border border-default-medium border-neutral-400 text-heading text-sm rounded focus:ring-brand focus:border-brand block w-full py-2 px-3 placeholder:text-body"
             placeholder="Електронна пошта чи телефон"
+            maxLength={40}
             required
             value={userInput.contact}
             onChange={handleChange}
@@ -108,6 +124,7 @@ export default function ContactForm() {
             name="message"
             className="border border-default-medium border-neutral-400 text-heading text-sm rounded focus:ring-brand focus:border-brand block w-full py-2 px-3 placeholder:text-body"
             placeholder="Ваше повідомлення"
+            maxLength={200}
             value={userInput.message}
             onChange={handleChange}
           />

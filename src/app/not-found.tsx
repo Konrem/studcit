@@ -12,7 +12,7 @@ const Custom404 = () => {
           <div className="orb orb--4" />
           <div className="error-container">
             <div className="error-code">404</div>
-            <div className="error-msg">Ех,тут нічого немає.</div>
+            <div className="error-msg">Упс, тут нічого немає.</div>
             <Link href="/" className="home-btn">
               Бігти на головну
             </Link>
@@ -85,7 +85,7 @@ const StyledWrapper = styled.div`
   .card .error-container {
     text-align: center;
     z-index: 10;
-    margin-bottom: 2rem;
+    margin-bottom: 5rem;
     pointer-events: none;
   }
 

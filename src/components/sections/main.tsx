@@ -10,14 +10,14 @@ import Form from "../ui/form";
 export default function Main() {
   const socials = [
     {
-      icon: "/technologies/html.svg",
-      title: "HTML",
+      icon: "/technologies/html5.svg",
+      title: "HTML5",
       link: "#",
       hover: "bg-trasparent",
     },
     {
-      icon: "/technologies/css.svg",
-      title: "CSS",
+      icon: "/technologies/css3.svg",
+      title: "CSS3",
       link: "#",
       hover: "bg-trasparent",
     },
@@ -37,7 +37,7 @@ export default function Main() {
   const sizeIconTech = 100;
 
   return (
-    <div className="bg-[var(--bg-main)] text-[var(--text-primary)] py-[3rem] lg:py-[5rem] overflow-hidden">
+    <div className="bg-[var(--bg-main)] text-[var(--text-primary)] pb-[3rem] pt-[6rem] lg:pt-[8rem] overflow-hidden" id="banner">
       <div className="text-center pb-4">
         <h1 className="font-semibold text-5xl tracking-tight">StudCIT.com</h1>
         <p className="font-medium text-xl line-height-[1.5] py-4">

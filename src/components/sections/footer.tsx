@@ -110,7 +110,7 @@ export default function Footer() {
           </div>
           <div className="p-4 mt-4">
             <p className="fw-medium text-base md:text-xl">
-              Україна, Суми, вул. Римського-Корсакова, 2
+              Україна, м. Суми, вул. Харківська, 116,
             </p>
             <p className="fw-medium text-base md:text-xl">
               Сумський Державний Університет, ЕТ корпус, каб. ЕТ-504
