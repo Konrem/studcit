@@ -6,31 +6,32 @@ import Info from "@/components/sections/info";
 import SocialBtn from "../ui/socialBtn";
 import RevealBlock from "../ui/animate/revealBlock";
 import Form from "../ui/form";
+import Faq from "../ui/faq";
 
 export default function Main() {
   const socials = [
     {
       icon: "/technologies/html5.svg",
       title: "HTML5",
-      link: "#",
+      link: "#faq-html",
       hover: "bg-trasparent",
     },
     {
       icon: "/technologies/css3.svg",
       title: "CSS3",
-      link: "#",
+      link: "#faq-css",
       hover: "bg-trasparent",
     },
     {
       icon: "/technologies/js.svg",
       title: "JavaScript",
-      link: "#",
+      link: "#faq-js",
       hover: "bg-trasparent",
     },
     {
       icon: "/technologies/laravel.svg",
       title: "Laravel",
-      link: "#",
+      link: "#faq-laravel",
       hover: "bg-trasparent",
     },
   ];
@@ -67,6 +68,7 @@ export default function Main() {
       <Info />
       <AboutCards />
       <Timeline />
+      <Faq />
       <Form />
     </div>
   );

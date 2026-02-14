@@ -20,10 +20,10 @@ export default function Header() {
       title: "Як ми працюємо",
       link: "/#how-we-work",
     },
-    {
-      title: "Контакти",
-      link: "/#footer",
-    },
+    // {
+    //   title: "Контакти",
+    //   link: "/#footer",
+    // },
   ];
 
   const [isPressed, setIsPressed] = useState(false);
@@ -87,15 +87,15 @@ export default function Header() {
                 <NavBtn title={btn.title} link={btn.link} />
               </li>
             ))}
-            {/* <li className="text-center">
+            <li className="text-center">
               <Link
                 href="#form"
                 type="button"
-                className="text-orange-400 hover:text-orange-600 focus:outline-none animate-pulse py-4 lg:p-2 mx-3 inline-flex flex-col items-center justify-center font-medium"
+                className="inline-flex flex-col items-center justify-center font-medium cursor-pointer rounded px-4 py-2 bg-orange-500 hover:bg-orange-600 mx-3"
               >
-                Подати заявку
+                Зв&apos;язатися з нами
               </Link>
-            </li> */}
+            </li>
             <li className="text-center">
               <ThemeToggle changeTheme={changeTheme} />
             </li>

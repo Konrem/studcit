@@ -7,7 +7,7 @@ export default function Browser() {
         <div className="hidden sm:flex h-[40px] items-end justify-between bg-[#353535] pl-5">
           <div className="relative h-[34px] w-[100px] rounded-t-[7px] bg-[#515151] px-2 pt-1">
             <div className="flex items-start justify-between gap-1">
-              <span className="text-[10px] text-white">My project</span>
+              <span className="text-[10px] text-white">Your project</span>
               <button className="rounded-full px-1 text-[9px] text-white hover:bg-[#5d5d5d]">
                 ✕
               </button>
@@ -42,7 +42,7 @@ export default function Browser() {
 
           <button
             disabled
-            className="hidden sm:block  h-[25px] w-[27px] rounded-full text-white opacity-40"
+            className="hidden sm:block h-[25px] w-[27px] rounded-full text-white opacity-40"
           >
             →
           </button>
@@ -64,7 +64,7 @@ export default function Browser() {
           </div>
         </div>
       </div>
-      <div className="py-8 sm:py-5">
+      <div className="pt-8 sm:pt-5">
         <SiteInBrowser />
       </div>
     </div>

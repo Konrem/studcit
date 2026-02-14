@@ -63,19 +63,19 @@ export default function ContactForm() {
 
   return (
     <div
-      className="container mt-[3rem] md:mt-[5rem] mx-auto flex justify-center flex-col"
+      className="container mt-[3rem] md:mt-[5rem] mx-auto flex justify-center flex-col scroll-mt-20"
       id="form"
     >
       <div className="text-center pb-4">
-        <h2 className="font-bold text-3xl">Не знаєте з чого почати?</h2>
-        <p className="font-medium text-xl py-4 text-balance mx-2">
+        <h2 className="font-bold text-3xl mb-4">Не знаєте з чого почати?</h2>
+        <p className="font-medium text-xl my-2 text-balance mx-2">
           Залиште заявку, і ми напишемо або зателефонуємо
         </p>
       </div>
       <div className="mx-4 flex align-start">
         <form
           onSubmit={handleSubmit}
-          className="md:min-w-[24rem] mx-auto relative"
+          className="md:min-w-[28rem] mx-auto relative"
         >
           <input
             name="phone"
@@ -86,13 +86,13 @@ export default function ContactForm() {
           />
           <label
             htmlFor="name"
-            className="block mb-1 font-semibold text-sm text-heading"
+            className="block mb-1 font-semibold text-base text-heading"
           >
             Ваше Ім&apos;я
           </label>
           <input
             name="name"
-            className="w-full border border-default-medium border-neutral-400 text-heading text-sm rounded focus:ring-brand focus:border-brand block w-full py-2 px-3 placeholder:text-body"
+            className="w-full border border-default-medium border-neutral-400 bg-white text-heading text-base rounded focus:ring-brand focus:border-brand block w-full py-2 px-3 placeholder:text-body"
             placeholder="Ім'я"
             maxLength={30}
             required
@@ -101,13 +101,13 @@ export default function ContactForm() {
           />
           <label
             htmlFor="contact"
-            className="block mt-3 mb-1 font-semibold text-sm text-heading"
+            className="block mt-3 mb-1 font-semibold text-base text-heading"
           >
             Як з Вами зв&apos;язатися?
           </label>
           <input
             name="contact"
-            className="border border-default-medium border-neutral-400 text-heading text-sm rounded focus:ring-brand focus:border-brand block w-full py-2 px-3 placeholder:text-body"
+            className="border border-default-medium border-neutral-400 bg-white text-heading text-base rounded focus:ring-brand focus:border-brand block w-full py-2 px-3 placeholder:text-body"
             placeholder="Електронна пошта чи телефон"
             maxLength={40}
             required
@@ -116,13 +116,13 @@ export default function ContactForm() {
           />
           <label
             htmlFor="message"
-            className="block mt-3 mb-1 font-semibold text-sm text-heading"
+            className="block mt-3 mb-1 font-semibold text-base text-heading"
           >
             Ваше побажання, як і коли з вами краще зв&apos;язатися
           </label>
           <textarea
             name="message"
-            className="border border-default-medium border-neutral-400 text-heading text-sm rounded focus:ring-brand focus:border-brand block w-full py-2 px-3 placeholder:text-body"
+            className="border border-default-medium border-neutral-400 bg-white text-heading text-base rounded focus:ring-brand focus:border-brand block w-full py-2 px-3 placeholder:text-body"
             placeholder="Ваше повідомлення"
             maxLength={200}
             value={userInput.message}

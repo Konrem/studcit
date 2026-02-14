@@ -36,7 +36,7 @@ export default function Timeline() {
   ];
 
   return (
-    <div className="mt-[3rem] lg:mt-[5rem]" id="how-we-work">
+    <div className="mt-[3rem] lg:mt-[5rem] scroll-mt-20" id="how-we-work">
       <h2 className="font-bold text-center mb-10 text-3xl md:text-5xl">
         Як ми працюємо?
       </h2>
