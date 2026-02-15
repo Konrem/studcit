@@ -75,7 +75,7 @@ export default function ContactForm() {
       <div className="mx-4 flex align-start">
         <form
           onSubmit={handleSubmit}
-          className="md:min-w-[28rem] mx-auto relative"
+          className="md:min-w-[28rem] mx-auto relative text-[var(--text-secondary)]"
         >
           <input
             name="phone"

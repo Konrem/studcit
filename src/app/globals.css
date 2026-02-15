@@ -2,17 +2,18 @@
 
 :root {
   --bg-main: #E8E8E8;
-  --text-primary: #171717;
+  --text-primary: #212121;
   --invert: 0;
 }
 
 [data-theme="dark"] {
-  --bg-main: #171717;
+  --bg-main: #212121;
   --text-primary: #E8E8E8;
+  --text-secondary: #212121;
   --invert: 100%;
 }
 .dark-theme{
-  background: #171717;
+  background: #212121;
   color: #E8E8E8 ;
 }
 .light-theme{
