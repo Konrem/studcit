@@ -75,7 +75,7 @@ export default function ContactForm() {
       <div className="mx-4 flex align-start">
         <form
           onSubmit={handleSubmit}
-          className="md:min-w-[28rem] mx-auto relative text-[var(--text-secondary)]"
+          className="md:min-w-[28rem] mx-auto relative"
         >
           <input
             name="phone"
@@ -92,7 +92,7 @@ export default function ContactForm() {
           </label>
           <input
             name="name"
-            className="w-full border border-default-medium border-neutral-400 bg-white text-heading text-base rounded focus:ring-brand focus:border-brand block w-full py-2 px-3 placeholder:text-body"
+            className="w-full text-[var(--text-secondary)] border border-default-medium border-neutral-400 bg-white text-heading text-base rounded focus:ring-brand focus:border-brand block w-full py-2 px-3 placeholder:text-body"
             placeholder="Ім'я"
             maxLength={30}
             required
@@ -107,7 +107,7 @@ export default function ContactForm() {
           </label>
           <input
             name="contact"
-            className="border border-default-medium border-neutral-400 bg-white text-heading text-base rounded focus:ring-brand focus:border-brand block w-full py-2 px-3 placeholder:text-body"
+            className="border text-[var(--text-secondary)] border-default-medium border-neutral-400 bg-white text-heading text-base rounded focus:ring-brand focus:border-brand block w-full py-2 px-3 placeholder:text-body"
             placeholder="Електронна пошта чи телефон"
             maxLength={40}
             required
@@ -122,7 +122,7 @@ export default function ContactForm() {
           </label>
           <textarea
             name="message"
-            className="border border-default-medium border-neutral-400 bg-white text-heading text-base rounded focus:ring-brand focus:border-brand block w-full py-2 px-3 placeholder:text-body"
+            className="border text-[var(--text-secondary)] border-default-medium border-neutral-400 bg-white text-heading text-base rounded focus:ring-brand focus:border-brand block w-full py-2 px-3 placeholder:text-body"
             placeholder="Ваше повідомлення"
             maxLength={200}
             value={userInput.message}

@@ -1,9 +1,16 @@
 import Link from "next/link";
 
-export default function NavBtn(props: { title: string; link: string }) {
+type NavBtnProps = {
+  title: string;
+  link: string;
+  closeMenu?: () => void;
+};
+
+export default function NavBtn({ title, link, closeMenu }: NavBtnProps) {
   return (
     <Link
-      href={props.link}
+      href={link}
+      onClick={closeMenu}
       className="py-4 lg:p-2 mx-3
                 inline-flex 
                 flex-col 
@@ -26,9 +33,9 @@ export default function NavBtn(props: { title: string; link: string }) {
                 after:duration-400
                 after:-translate-x-1/2"
     >
-      {props.title}
+      {title}
       <span className="invisible h-0 font-bold" aria-hidden="true">
-        {props.title}
+        {title}
       </span>
     </Link>
   );

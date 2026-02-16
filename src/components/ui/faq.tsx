@@ -97,7 +97,7 @@ export default function Faq() {
               />
             </button>
             {open === item.id && (
-              <div className="p-6 border-t backdrop-blur-3xl animate-[slideDown_0.4s_ease-out] bg-[var(--text-primary)]">
+              <div className="p-6 border-t backdrop-blur-3xl animate-[slideDown_0.4s_ease-out] bg-[var(--text-primary)]/[0.5]">
                 <p className="text-[var(--bg-main)] leading-relaxed">
                   {item.content}
                 </p>

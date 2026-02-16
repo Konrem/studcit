@@ -5,14 +5,14 @@ import Link from "next/link";
 import { useState } from "react";
 
 // eslint-disable-next-line @typescript-eslint/no-explicit-any
-export default function ThemeToggle({ changeTheme }: { changeTheme: any }) {
+export default function ThemeToggle({ closeMenu }: { closeMenu: any }) {
   const [theme, setTheme] = useState("light");
 
   const toggleTheme = () => {
     const newTheme = theme === "light" ? "dark" : "light";
     setTheme(newTheme);
     document.body.setAttribute("data-theme", newTheme);
-    changeTheme(true);
+    closeMenu(true);
   };
 
   return (

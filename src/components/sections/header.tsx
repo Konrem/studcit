@@ -28,7 +28,7 @@ export default function Header() {
 
   const [isPressed, setIsPressed] = useState(false);
 
-  const changeTheme = () => setIsPressed(!isPressed);
+  const closeMenu = () => setIsPressed(!isPressed);
 
   return (
     <div className="fixed w-full z-20 dark-theme border-b-1 border-neutral-700">
@@ -84,20 +84,20 @@ export default function Header() {
           <ul className="flex flex-col lg:flex-row pb-3 lg:pb-0">
             {navButtons.map((btn, index) => (
               <li key={index} className="text-center">
-                <NavBtn title={btn.title} link={btn.link} />
+                <NavBtn title={btn.title} link={btn.link} closeMenu={closeMenu} />
               </li>
             ))}
             <li className="text-center">
               <Link
                 href="#form"
-                type="button"
+                onClick={() => setIsPressed(!isPressed)}
                 className="inline-flex flex-col items-center justify-center font-medium cursor-pointer rounded px-4 py-2 bg-orange-500 hover:bg-orange-600 mx-3"
               >
                 Зв&apos;язатися з нами
               </Link>
             </li>
             <li className="text-center">
-              <ThemeToggle changeTheme={changeTheme} />
+              <ThemeToggle closeMenu={closeMenu} />
             </li>
           </ul>
         </div>
