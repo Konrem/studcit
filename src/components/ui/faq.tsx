@@ -44,14 +44,14 @@ export default function Faq() {
     {
       id: "payment",
       icon: "/technologies/service-pay.svg",
-      title: "Як формується вартість і відбувається оплата проєкту?",
+      title: "Як формується ціна проєкту та оплата?",
       content:
         "Ми працюємо невеликою командою, тому не використовуємо шаблонні пакети чи фіксовані тарифи.\n\nВартість кожного проєкту формується індивідуально після обговорення цілей, обсягу робіт, функціоналу та технічних вимог.\n\nОплата зазвичай відбувається поетапно: частина — на старті, решта — після виконання ключових етапів або завершення проєкту. Такий підхід забезпечує прозорість процесу та гнучкість у роботі.",
     },
     {
       id: "time-work",
       icon: "/technologies/service-support.svg",
-      title: "Які терміни виконання робіт і чи можливі зміни в процесі?",
+      title: "Які терміни роботи і правки в процесі?",
       content:
         "Терміни залежать від складності та масштабу проєкту. Невеликі сайти або окремі функції реалізуються швидше, складні веб-рішення потребують більше часу на проєктування, розробку та тестування.\n\nМи погоджуємо орієнтовний графік ще на початку роботи та підтримуємо постійний зв’язок у процесі розробки.\n\nЗа потреби зміни або доповнення функціоналу можна вносити в процесі роботи — усі правки обговорюються окремо з урахуванням впливу на терміни та бюджет.",
     },
@@ -78,7 +78,7 @@ export default function Faq() {
               className="w-full px-2 py-4 sm:p-6 flex justify-between items-center"
             >
               <div className="flex items-center gap-2 md:gap-4">
-                <div className="w-12 h-12 rounded-xl bg-[var(--bg-main)] md:border-2 border-[var(--text-primary)] md:backdrop-blur-md mdshadow-inner flex items-center justify-center">
+                <div className="min-w-[40px] w-12 h-12 rounded-xl bg-[var(--bg-main)] md:border-2 border-[var(--text-primary)] md:backdrop-blur-md mdshadow-inner flex items-center justify-center">
                   <Image src={item.icon} alt="" width={25} height={25} />
                 </div>
                 <h3

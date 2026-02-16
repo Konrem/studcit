@@ -79,7 +79,7 @@ export default function Footer() {
               </Link>
             </div>
             <div className="flex py-1">
-              <Link href="mailto:studcit@gmail.com">
+              <Link href="mailto:studcit.test@gmail.com">
                 <Image
                   className="mr-3 inline-block"
                   src="/social/email.svg"
@@ -88,7 +88,7 @@ export default function Footer() {
                   height={25}
                 />
                 <span className="fw-medium text-base md:text-xl">
-                  studcit@gmail.com
+                  studcit.test@gmail.com
                 </span>
               </Link>
             </div>
