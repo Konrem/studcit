@@ -58,8 +58,8 @@ export default function Faq() {
   ];
 
   return (
-    <div className="container mx-auto mt-[5rem] px-4">
-      <h2 className="text-center pb-4 font-bold text-3xl mb-4">
+    <div className="container mx-auto mt-[3rem] lg:mt-[5rem] px-4">
+      <h2 className="text-3xl md:text-3xl text-center font-bold mb-4 md:mb-8">
         FAQ: Часті запитання про наші технології та роботу
       </h2>
       {items.map((item) => {

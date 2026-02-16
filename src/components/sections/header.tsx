@@ -91,7 +91,7 @@ export default function Header() {
               <Link
                 href="#form"
                 onClick={() => setIsPressed(!isPressed)}
-                className="inline-flex flex-col items-center justify-center font-medium cursor-pointer rounded px-4 py-2 bg-orange-500 hover:bg-orange-600 mx-3"
+                className="inline-flex flex-col items-center justify-center font-medium cursor-pointer rounded px-4 py-2 bg-orange-500 hover:bg-orange-600 mx-3 my-4 md:my-0"
               >
                 Зв&apos;язатися з нами
               </Link>

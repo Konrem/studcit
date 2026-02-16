@@ -23,7 +23,7 @@ export default function Info() {
   ];
   return (
     <div className="mt-[3rem] lg:mt-[5rem] scroll-mt-20" id="main-aspects">
-      <h2 className="text-3xl md:text-5xl font-bold my-8 text-center">
+      <h2 className="text-3xl md:text-5xl font-bold mb-4 md:mb-8 text-center">
         Основні аспекти
       </h2>
       {infoCards.map((card, index) => (

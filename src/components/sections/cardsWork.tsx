@@ -34,7 +34,7 @@ export default function AboutCards() {
       <div className="text-center pb-4">
         <h2 className="font-bold text-3xl md:text-5xl">СтудЦІТ - це</h2>
         <p className="font-medium text-xl py-4">
-          не тільки спеціалісти, які отримують вищу, а також
+          це не тільки спеціалісти, які здобувають вищу освіту, а також:
         </p>
       </div>
       <div className="container mx-auto flex justify-center lg:justify-around flex-wrap gap-8 lg:flex-nowrap lg:gap-2">

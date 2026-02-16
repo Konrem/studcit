@@ -37,7 +37,7 @@ export default function Timeline() {
 
   return (
     <div className="mt-[3rem] lg:mt-[5rem] scroll-mt-20" id="how-we-work">
-      <h2 className="font-bold text-center mb-10 text-3xl md:text-5xl">
+      <h2 className="font-bold text-center mb-4 md:mb-8 text-3xl md:text-5xl">
         Як ми працюємо?
       </h2>
       <ul className="relative before:absolute before:top-0 before:left-[1.4rem] pl-[2rem] pr-4 sm:before:left-[2.4rem] sm:px-[3rem] lg:before:left-1/2 before:h-full before:w-0.5 before:-translate-x-1/2 before:rounded-full before:bg-[var(--text-primary)] overflow-hidden">

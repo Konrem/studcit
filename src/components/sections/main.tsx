@@ -45,7 +45,7 @@ export default function Main() {
           Поки ти дивишся сайт, ми його уже робимо
         </p>
       </div>
-      <div className="flex flex-wrap gap-8 lg:flex-nowrap items-start justify-center">
+      <div className="flex flex-wrap gap-4 md:gap-8 lg:flex-nowrap items-start justify-center">
         <Browser />
         <div>
           <Console />
