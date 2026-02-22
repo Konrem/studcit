@@ -8,8 +8,8 @@ export default function Map() {
   return (
     <>
       <MapContainer
-        className="map-container w-[100%] h-[100%] lg:w-[230px] xl:w-[450px] h-[210px] m-4"
-        center={[50.893123, 34.84068]}
+        className="map-container w-[100%] h-[100%] lg:w-[200px] xl:w-[400px] h-[200px] m-4"
+        center={[50.89242, 34.84132]}
         zoom={17}
         scrollWheelZoom={true}
       >
@@ -18,7 +18,7 @@ export default function Map() {
           url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
         />
         <Marker
-          position={[50.893123, 34.84068]}
+          position={[50.89242, 34.84127]}
            icon={L.divIcon({
             iconSize: [36, 36],
             iconAnchor: [18, 36],
@@ -27,7 +27,7 @@ export default function Map() {
           })}
         >
           <Popup>
-            Кабінет ЕТ-504.
+            Кабінет Ц-239.
           </Popup>
         </Marker>
       </MapContainer>

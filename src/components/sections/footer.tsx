@@ -5,54 +5,54 @@ import Map from "../ui/Map";
 
 export default function Footer() {
   const socials = [
-    {
-      icon: "/social/whatsapp.svg",
-      title: "Whatsapp",
-      link: "#",
-      hover: "bg-green-400",
-    },
+    // {
+    //   icon: "/social/whatsapp.svg",
+    //   title: "Whatsapp",
+    //   link: "#",
+    //   hover: "bg-green-400",
+    // },
     {
       icon: "/social/telegram.svg",
       title: "Telegram",
-      link: "#",
+      link: "https://t.me/artemC239",
       hover: "bg-blue-400",
     },
-    {
-      icon: "/social/viber.svg",
-      title: "Viber",
-      link: "#",
-      hover: "bg-fuchsia-700",
-    },
-    {
-      icon: "/social/facebook.svg",
-      title: "Facebook",
-      link: "#",
-      hover: "bg-blue-500",
-    },
-    {
-      icon: "/social/linkedin.svg",
-      title: "LinkedIn",
-      link: "#",
-      hover: "bg-[#006699]",
-    },
+    // {
+    //   icon: "/social/viber.svg",
+    //   title: "Viber",
+    //   link: "#",
+    //   hover: "bg-fuchsia-700",
+    // },
+    // {
+    //   icon: "/social/facebook.svg",
+    //   title: "Facebook",
+    //   link: "#",
+    //   hover: "bg-blue-500",
+    // },
+    // {
+    //   icon: "/social/linkedin.svg",
+    //   title: "LinkedIn",
+    //   link: "#",
+    //   hover: "bg-[#006699]",
+    // },
     {
       icon: "/social/github.svg",
       title: "Github",
-      link: "#",
+      link: "https://github.com/stud-cit",
       hover: "bg-white",
     },
-    {
-      icon: "/social/instagram.svg",
-      title: "Instagram",
-      link: "#",
-      hover: "bg-gradient-to-bl from-purple-500 via-pink-500 to-yellow-500",
-    },
-    {
-      icon: "/social/youtube.svg",
-      title: "Youtube",
-      link: "#",
-      hover: "bg-[#FF3000]",
-    },
+    // {
+    //   icon: "/social/instagram.svg",
+    //   title: "Instagram",
+    //   link: "#",
+    //   hover: "bg-gradient-to-bl from-purple-500 via-pink-500 to-yellow-500",
+    // },
+    // {
+    //   icon: "/social/youtube.svg",
+    //   title: "Youtube",
+    //   link: "#",
+    //   hover: "bg-[#FF3000]",
+    // },
   ];
 
   const sizeIconSocial = 25;
@@ -64,8 +64,8 @@ export default function Footer() {
       >
         <div>
           <div className="mt-4 mx-4">
-            <div className="flex py-1">
-              <Link href="tel:+380985252165">
+            <div className="flex py-2">
+              {/* <Link href="#">
                 <Image
                   className="mr-3 inline-block"
                   src="/social/telephone.svg"
@@ -74,11 +74,11 @@ export default function Footer() {
                   height={25}
                 />
                 <span className="fw-medium text-base md:text-xl">
-                  +38(098) 525-21-65
+                  +38(0XX) XXX-XX-XX
                 </span>
-              </Link>
+              </Link> */}
             </div>
-            <div className="flex py-1">
+            <div className="flex">
               <Link href="mailto:studcit.test@gmail.com">
                 <Image
                   className="mr-3 inline-block"
@@ -113,7 +113,7 @@ export default function Footer() {
               Україна, м. Суми, вул. Харківська, 116,
             </p>
             <p className="fw-medium text-base md:text-xl">
-              Сумський Державний Університет, ЕТ корпус, каб. ЕТ-504
+              Сумський Державний Університет, Центральний корпус, каб. Ц-239
             </p>
           </div>
         </div>
