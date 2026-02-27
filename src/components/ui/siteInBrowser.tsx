@@ -133,7 +133,7 @@ export default function SiteInBrowser() {
           </div>
         </div>
       </div>
-      <div className="flex justify-center sm:justify-around flex-wrap ">
+      <div className="flex justify-center flex-wrap sm:gap-10">
         {projects.map((item, index) => (
           <div key={index} className="w-1/2 sm:w-auto flex items-center flex-col mt-3">
             <div className="w-[4rem] h-[4rem] rounded-xl bg-neutral-200 mx-2 flex items-center justify-center transition-all duration-300 hover:scale-110 ">
@@ -141,8 +141,8 @@ export default function SiteInBrowser() {
                 className="p-0"
                 src={item.icon}
                 alt={item.name}
-                width={50}
-                height={50}
+                width={40}
+                height={40}
               />
             </div>
             <span className="text-xs text-center mt-2 block">{item.name}</span>
