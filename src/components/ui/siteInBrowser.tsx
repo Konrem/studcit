@@ -20,26 +20,26 @@ export default function SiteInBrowser() {
   const projects = [
     {
       name: "Business Card",
-      icon: "/siteInBrowser/business-card-svgrepo-com.svg",
+      icon: "/siteInBrowser/business-card.svg",
     },
     {
       name: "Landing Page",
-      icon: "/siteInBrowser/calculator-svgrepo-com.svg",
+      icon: "/siteInBrowser/landing-page.svg",
     },
     {
-      name: "Web Component",
-      icon: "/siteInBrowser/project-svgrepo-com.svg",
+      name: "Component",
+      icon: "/siteInBrowser/component.svg",
     },
     {
       name: "Multi-Page",
-      icon: "/siteInBrowser/analyze-svgrepo-com.svg",
+      icon: "/siteInBrowser/multipage.svg",
     },
   ];
 
   return (
     <div className="mx-auto mt-2 w-full">
-      <div className="bg-[url(/siteInBrowser/modern-laptop-laying-desk.jpg)] bg-cover bg-center w-full h-[15rem]">
-        <div className="h-full w-full rounded-md bg-clip-padding backdrop-filter backdrop-blur-xs bg-opacity-10">
+      <div className="bg-[url(/siteInBrowser/modern-laptop-laying-desk.jpg)] bg-cover bg-center w-full h-[27rem] sm:h-[21rem]">
+        <div className="h-full w-full rounded-md bg-clip-padding backdrop-blur-[3px] bg-opacity-10">
           <div className="flex justify-between items-center p-4">
             <div className="hidden text-xs font-medium text-white md:flex">
               <a className="px-2 cursor-pointer">About</a>
@@ -131,23 +131,28 @@ export default function SiteInBrowser() {
               </div>
             </div>
           </div>
-        </div>
-      </div>
-      <div className="flex justify-center flex-wrap sm:gap-10">
-        {projects.map((item, index) => (
-          <div key={index} className="w-1/2 sm:w-auto flex items-center flex-col mt-3">
-            <div className="w-[4rem] h-[4rem] rounded-xl bg-neutral-200 mx-2 flex items-center justify-center transition-all duration-300 hover:scale-110 ">
-              <Image
-                className="p-0"
-                src={item.icon}
-                alt={item.name}
-                width={40}
-                height={40}
-              />
-            </div>
-            <span className="text-xs text-center mt-2 block">{item.name}</span>
+          <div className="flex justify-center flex-wrap sm:gap-10 mt-4">
+            {projects.map((item, index) => (
+              <div
+                key={index}
+                className="max-w-[50%] min-w-[35%] sm:min-w-auto w-auto flex justify-center items-center flex-col mx-2 sm:mx-0 mt-4 md:mt-6"
+              >
+                <div className="w-[6rem] h-[6rem] rounded-xl bg-black/50 backdrop-blur-2xl border border-white/30 flex flex-col items-center justify-center transition-all duration-300 hover:scale-110 shadow-lg shadow-black/20">
+                  <Image
+                    className="py-2"
+                    src={item.icon}
+                    alt={item.name}
+                    width={40}
+                    height={40}
+                  />
+                  <span className="text-xs text-white/90 text-center px-1 my-1 block">
+                    {item.name}
+                  </span>
+                </div>
+              </div>
+            ))}
           </div>
-        ))}
+        </div>
       </div>
     </div>
   );

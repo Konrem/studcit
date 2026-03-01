@@ -2,7 +2,7 @@ import SiteInBrowser from "./siteInBrowser";
 
 export default function Browser() {
   return (
-    <div className="relative flex mx-6 sm:m-0 h-[500px] sm:h-[430px] max-w-[35rem] w-full flex-col overflow-hidden rounded-xl bg-white shadow-[5px_5px_10px_rgba(31,31,31,0.245)]">
+    <div className="relative flex mx-6 sm:m-0 h-[500px] sm:h-[420px] max-w-[35rem] w-full flex-col overflow-hidden rounded-xl bg-white shadow-[5px_5px_10px_rgba(31,31,31,0.245)]">
       <div>
         <div className="hidden sm:flex h-[40px] items-end justify-between bg-[#353535] pl-5">
           <div className="relative h-[34px] w-[100px] rounded-t-[7px] bg-[#515151] px-2 pt-1">
