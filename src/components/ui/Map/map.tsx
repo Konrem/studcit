@@ -3,13 +3,14 @@
 import { MapContainer, TileLayer } from "react-leaflet";
 import "leaflet/dist/leaflet.css";
 import { Marker, Popup } from "react-leaflet";
+import L from "leaflet";
 
-export default function Map() {
+export default function Map(props: { marker: string, position: {x: number, y: number} }) {
   return (
     <>
       <MapContainer
         className="map-container w-[100%] h-[100%] lg:w-[200px] xl:w-[400px] h-[200px] m-4"
-        center={[50.89242, 34.84132]}
+        center={[props.position.y, props.position.x]}
         zoom={17}
         scrollWheelZoom={true}
       >
@@ -18,7 +19,7 @@ export default function Map() {
           url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
         />
         <Marker
-          position={[50.89242, 34.84127]}
+          position={[props.position.y, props.position.x]}
            icon={L.divIcon({
             iconSize: [36, 36],
             iconAnchor: [18, 36],
@@ -27,7 +28,7 @@ export default function Map() {
           })}
         >
           <Popup>
-            Кабінет Ц-239.
+            {props.marker}
           </Popup>
         </Marker>
       </MapContainer>

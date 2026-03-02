@@ -1,47 +1,17 @@
+import landingContent from "@/app/content/landingContent";
 import RevealBlock from "../ui/animate/revealBlock";
 import TimelineBlock from "../ui/timeline-block";
 
 export default function Timeline() {
-  const timeline = [
-    {
-      icon: "/timeline/target.svg",
-      title: "Аналіз",
-      description:
-        "Визначаємо цілі проєкту, цільову аудиторію та ключові задачі. Аналізуємо вимоги, контент і технічні обмеження, щоб сформувати чітке бачення майбутнього сайту.",
-    },
-    {
-      icon: "/timeline/pencil.svg",
-      title: "Проєктування",
-      description:
-        "Створюємо структуру сайту, продумуємо логіку навігації та взаємодію користувача з інтерфейсом. Формуємо прототип, який відображає основні сценарії використання.",
-    },
-    {
-      icon: "/timeline/pen-file.svg",
-      title: "Дизайн",
-      description:
-        "Розробляємо візуальний стиль, підбираємо кольори, шрифти та компоненти інтерфейсу. Дизайн узгоджується з цілями проєкту та підкреслює його характер.",
-    },
-    {
-      icon: "/timeline/code-desktop.svg",
-      title: "Веб-розробка",
-      description:
-        "Реалізуємо дизайн у коді, налаштовуємо адаптивність, інтегруємо необхідний функціонал та сервіси. Забезпечуємо коректну роботу на різних пристроях.",
-    },
-    {
-      icon: "/timeline/rocket.svg",
-      title: "Запуск",
-      description:
-        "Перевіряємо сайт, оптимізуємо швидкість та публікуємо проєкт. Після запуску можливі доопрацювання та подальший розвиток ресурсу.",
-    },
-  ];
+  const {title, anchor, timelineBlocks} = landingContent.timeline;
 
   return (
-    <div className="mt-[3rem] lg:mt-[5rem] scroll-mt-20" id="how-we-work">
+    <div className="mt-[3rem] lg:mt-[5rem] scroll-mt-20" id={anchor}>
       <h2 className="font-bold text-center mb-4 md:mb-8 text-3xl md:text-5xl">
-        Як ми працюємо?
+        {title}
       </h2>
       <ul className="relative before:absolute before:top-0 before:left-[1.4rem] pl-[2rem] pr-4 sm:before:left-[2.4rem] sm:px-[3rem] lg:before:left-1/2 before:h-full before:w-0.5 before:-translate-x-1/2 before:rounded-full before:bg-[var(--text-primary)] overflow-hidden">
-        {timeline.map((block, index) => (
+        {timelineBlocks.map((block, index) => (
           <li
             className="group relative grid lg:grid-cols-2 my-10 -ml-5 lg:m-0 lg:odd:-ml-5 lg:even:-mr-5"
             key={index}

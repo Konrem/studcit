@@ -5,26 +5,10 @@ import NavBtn from "../ui/navBtn";
 import { useState } from "react";
 import ThemeToggle from "../ui/themeBtn";
 import Link from "next/link";
+import landingContent from "@/app/content/landingContent";
 
 export default function Header() {
-  const navButtons = [
-    {
-      title: "Основні аспекти",
-      link: "/#main-aspects",
-    },
-    {
-      title: "Про нас",
-      link: "/#about",
-    },
-    {
-      title: "Як ми працюємо",
-      link: "/#how-we-work",
-    },
-    // {
-    //   title: "Контакти",
-    //   link: "/#footer",
-    // },
-  ];
+  const {navButtons, contactForUs} = landingContent.header;
 
   const [isPressed, setIsPressed] = useState(false);
 
@@ -34,7 +18,7 @@ export default function Header() {
     <div className="fixed w-full z-20 dark-theme border-b-1 border-neutral-700">
       <nav className="container flex item-center flex-wrap justify-between px-2 lg:px-4 mx-auto flex-row">
         <div className="logo block">
-          <Link href="#banner">
+          <Link href="#top">
             <Image
               src="/logo/logo_darkTheme.svg"
               className="m-2 w-[200px] sm:w-[240px] h-auto"
@@ -89,11 +73,11 @@ export default function Header() {
             ))}
             <li className="text-center">
               <Link
-                href="#form"
+                href={contactForUs.link}
                 onClick={() => setIsPressed(!isPressed)}
                 className="inline-flex flex-col items-center justify-center font-medium cursor-pointer rounded px-4 py-2 bg-orange-500 hover:bg-orange-600 mx-3 my-4 md:my-0"
               >
-                Зв&apos;язатися з нами
+                {contactForUs.text}
               </Link>
             </li>
             <li className="text-center">

@@ -5,6 +5,6 @@ const Map = dynamic(() => import('./map'), {
   ssr: false,
 });
 
-export default function Page() {
-  return <Map />;
+export default function Page( props: { marker: string, position: {x: number, y: number} }) {
+  return <Map marker={props.marker} position={props.position} />;
 }

@@ -3,8 +3,11 @@
 import { useState, ChangeEvent, FormEvent } from "react";
 import { ToastContainer, toast } from "react-toastify";
 import emailjs from "@emailjs/browser";
+import formText from "@/app/content/formText";
 
 export default function ContactForm() {
+  const { title, description, nameInput, namePlaceholder, emailInput, emailPlaceholder, messageInput, messagePlaceholder, submitButton, submit } = formText;
+
   const [userInput, setUserInput] = useState({
     name: "",
     contact: "",
@@ -29,10 +32,10 @@ export default function ContactForm() {
 
     try {
       if (new FormData(e.currentTarget).get("phone") !== "") {
-        throw new Error("Заповнення неіснуючих даних!");
+        throw new Error(submit.error);
       }
       await emailjs.send(serviceID, templateID, userInput, userID);
-      toast.success("Заявка залишена успішно!", {
+      toast.success(submit.success, {
         position: "top-right",
         autoClose: 5000,
         hideProgressBar: true,
@@ -45,7 +48,7 @@ export default function ContactForm() {
       setUserInput({ name: "", contact: "", message: "" });
     } catch (err) {
       toast.error(
-        "Виникла помилка під час відправлення! Спробуйте пізніше або написати нам за контактами внизу.",
+        submit.error,
         {
           position: "top-right",
           autoClose: 5000,
@@ -67,9 +70,9 @@ export default function ContactForm() {
       id="form"
     >
       <div className="text-center pb-4">
-        <h2 className="font-bold text-3xl mb-4">Не знаєте з чого почати?</h2>
+        <h2 className="font-bold text-3xl mb-4">{title}</h2>
         <p className="font-medium text-xl my-2 text-balance mx-2">
-          Залиште заявку, і ми напишемо або зателефонуємо
+          {description}
         </p>
       </div>
       <div className="mx-4 flex align-start">
@@ -88,12 +91,12 @@ export default function ContactForm() {
             htmlFor="name"
             className="block mb-1 font-semibold text-base text-heading"
           >
-            Ваше Ім&apos;я
+            {nameInput}
           </label>
           <input
             name="name"
             className="w-full text-[var(--text-secondary)] border border-default-medium border-neutral-400 bg-white text-heading text-base rounded focus:ring-brand focus:border-brand block w-full py-2 px-3 placeholder:text-body"
-            placeholder="Ім'я"
+            placeholder={namePlaceholder}
             maxLength={30}
             required
             value={userInput.name}
@@ -103,12 +106,12 @@ export default function ContactForm() {
             htmlFor="contact"
             className="block mt-3 mb-1 font-semibold text-base text-heading"
           >
-            Як з Вами зв&apos;язатися?
+            {emailInput}
           </label>
           <input
             name="contact"
             className="border text-[var(--text-secondary)] border-default-medium border-neutral-400 bg-white text-heading text-base rounded focus:ring-brand focus:border-brand block w-full py-2 px-3 placeholder:text-body"
-            placeholder="Електронна пошта чи телефон"
+            placeholder={emailPlaceholder}
             maxLength={40}
             required
             value={userInput.contact}
@@ -118,12 +121,12 @@ export default function ContactForm() {
             htmlFor="message"
             className="block mt-3 mb-1 font-semibold text-base text-heading"
           >
-            Ваше побажання, як і коли з вами краще зв&apos;язатися
+            {messageInput}
           </label>
           <textarea
             name="message"
             className="border text-[var(--text-secondary)] border-default-medium border-neutral-400 bg-white text-heading text-base rounded focus:ring-brand focus:border-brand block w-full py-2 px-3 placeholder:text-body"
-            placeholder="Ваше повідомлення"
+            placeholder={messagePlaceholder}
             maxLength={200}
             value={userInput.message}
             onChange={handleChange}
@@ -134,7 +137,7 @@ export default function ContactForm() {
               className="mt-5 cursor-pointer relative rounded group overflow-hidden border-2 px-8 py-2 border-orange-600"
             >
               <span className="font-bold text-white text-xl relative z-10 group-hover:text-orange-500 duration-500">
-                Подати заявку
+                {submitButton}
               </span>
               <span className="absolute top-0 left-0 w-full bg-orange-600 duration-500 group-hover:-translate-x-full h-full"></span>
               <span className="absolute top-0 left-0 w-full bg-orange-600 duration-500 group-hover:translate-x-full h-full"></span>

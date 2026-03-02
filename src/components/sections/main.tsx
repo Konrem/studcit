@@ -1,48 +1,23 @@
 import Console from "@/components/ui/console";
 import Browser from "@/components/ui/browser";
+import Info from "@/components/sections/info";
 import AboutCards from "@/components/sections/cardsWork";
 import Timeline from "@/components/sections/timeline";
-import Info from "@/components/sections/info";
+import Faq from "@/components/sections//faq";
+import Form from "@/components/sections//form";
 import SocialBtn from "../ui/socialBtn";
-import RevealBlock from "../ui/animate/revealBlock";
-import Form from "../ui/form";
-import Faq from "../ui/faq";
+import landingContent from "@/app/content/landingContent";
 
 export default function Main() {
-  const socials = [
-    {
-      icon: "/technologies/html5.svg",
-      title: "HTML5",
-      link: "#faq-html",
-      hover: "bg-trasparent",
-    },
-    {
-      icon: "/technologies/css3.svg",
-      title: "CSS3",
-      link: "#faq-css",
-      hover: "bg-trasparent",
-    },
-    {
-      icon: "/technologies/js.svg",
-      title: "JavaScript",
-      link: "#faq-js",
-      hover: "bg-trasparent",
-    },
-    {
-      icon: "/technologies/laravel.svg",
-      title: "Laravel",
-      link: "#faq-laravel",
-      hover: "bg-trasparent",
-    },
-  ];
+  const {title, description, technologies} = landingContent.main;
   const sizeIconTech = 100;
 
   return (
-    <div className="bg-[var(--bg-main)] text-[var(--text-primary)] pb-[3rem] pt-[6rem] lg:pt-[8rem] overflow-hidden" id="banner">
+    <div className="bg-[var(--bg-main)] text-[var(--text-primary)] pb-[3rem] pt-[6rem] lg:pt-[8rem] overflow-hidden" id="top">
       <div className="text-center pb-4">
-        <h1 className="font-semibold text-5xl tracking-tight">StudCIT.com</h1>
+        <h1 className="font-semibold text-5xl tracking-tight">{title}</h1>
         <p className="font-medium text-xl line-height-[1.5] py-4">
-          Поки ти дивишся сайт, ми його уже робимо
+          {description}
         </p>
       </div>
       <div className="flex flex-wrap gap-4 md:gap-8 lg:flex-nowrap items-start justify-center">
@@ -51,13 +26,13 @@ export default function Main() {
           <Console />
           <div className="my-6">
             <div className="flex">
-              {socials.map((social, index) => (
+              {technologies.map((technology, index) => (
                 <SocialBtn
                   key={index}
-                  icon={social.icon}
-                  title={social.title}
-                  link={social.link}
-                  hover={social.hover}
+                  icon={technology.icon}
+                  title={technology.title}
+                  link={technology.link}
+                  hover={technology.hover}
                   size={sizeIconTech}
                 />
               ))}
