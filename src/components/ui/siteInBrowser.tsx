@@ -11,14 +11,21 @@ export default function SiteInBrowser() {
 
   return (
     <div className="mx-auto mt-2 w-full">
-      <div className="bg-[url(/siteInBrowser/modern-laptop-laying-desk.jpg)] bg-cover bg-center w-full h-[28rem] sm:h-[21rem]">
+      <div className="w-full h-[28rem] sm:h-[21rem] overflow-hidden relative">
+        <Image
+          src="/siteInBrowser/modern-laptop-laying-desk.jpg"
+          alt="Laptop on desk"
+          fill
+          priority
+          className="object-cover object-center"
+        />
         <div className="h-full w-full rounded-md bg-clip-padding backdrop-blur-[3px] bg-opacity-10">
           <div className="flex justify-between items-center p-4">
             <div className="hidden text-xs font-medium text-white md:flex">
               {header.map((item, index) => (
-                <a className="px-2 cursor-pointer" key={index}>
+                <span className="px-2 cursor-pointer" key={index}>
                   {item.name}
-                </a>
+                </span>
               ))}
             </div>
 
@@ -31,11 +38,14 @@ export default function SiteInBrowser() {
             />
 
             <div className="hidden text-xs font-medium text-white md:flex">
-              <a className="px-1 cursor-pointer">{headerMobile[0].value}</a>
+              <span className="px-1 cursor-pointer">
+                {headerMobile[0].value}
+              </span>
             </div>
             <div className="relative md:hidden z-50">
               <button
                 onClick={() => setOpen(!open)}
+                aria-label="Contact menu toggle"
                 className="w-9 h-10 flex flex-col items-center justify-center cursor-pointer mr-3"
               >
                 <div
@@ -67,10 +77,10 @@ export default function SiteInBrowser() {
                 }`}
               >
                 {headerMobile.map((item, index) => (
-                  <a
+                  <span
                     key={index}
                     onClick={() => setOpen(false)}
-                    className={`flex flex-col items-center cursor-pointer transition-all duration-500 ${
+                    className={`flex flex-col items-center cursor-pointer transition-all duration-500 cursor-pointer ${
                       open
                         ? "translate-y-0 opacity-100"
                         : "translate-y-4 opacity-0"
@@ -92,7 +102,7 @@ export default function SiteInBrowser() {
                     <span className="text-xs font-bold text-white text-center mt-2">
                       {item.name}
                     </span>
-                  </a>
+                  </span>
                 ))}
               </div>
             </div>

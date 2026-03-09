@@ -1,91 +1,44 @@
-"use client";
-
-import Image from "next/image";
-import NavBtn from "../ui/navBtn";
-import { useState } from "react";
-import ThemeToggle from "../ui/themeBtn";
-import Link from "next/link";
+import Console from "@/components/ui/console";
+import Browser from "@/components/ui/browser";
+import SocialBtn from "../ui/socialBtn";
 import landingContent from "@/app/content/landingContent";
 
 export default function Header() {
-  const {navButtons, contactForUs} = landingContent.header;
-
-  const [isPressed, setIsPressed] = useState(false);
-
-  const closeMenu = () => setIsPressed(!isPressed);
-
+  const { title, description, technologies } = landingContent.main;
+  const sizeIconTech = 100;
+  
   return (
-    <div className="fixed w-full z-20 dark-theme border-b-1 border-neutral-700">
-      <nav className="container flex item-center flex-wrap justify-between px-2 lg:px-4 mx-auto flex-row">
-        <div className="logo block">
-          <Link href="#top">
-            <Image
-              src="/logo/logo_darkTheme.svg"
-              className="m-2 w-[200px] sm:w-[240px] h-auto"
-              alt="StudCIT logo"
-              width={240}
-              height={60}
-            />
-          </Link>
+    <header
+      className="bg-[var(--bg-main)] text-[var(--text-primary)] pt-[6rem] lg:pt-[8rem] overflow-hidden"
+      id="top"
+      role="banner"
+    >
+      <div className="text-center pb-4">
+        <h1 className="font-semibold text-5xl tracking-tight">{title}</h1>
+        <p className="font-medium text-xl line-height-[1.5] py-4">
+          {description}
+        </p>
+      </div>
+      <div className="flex flex-wrap gap-4 md:gap-8 lg:flex-nowrap items-start justify-center">
+        <Browser />
+        <div>
+          <Console />
+          <div className="my-6">
+            <div className="flex">
+              {technologies.map((technology, index) => (
+                <SocialBtn
+                  key={index}
+                  icon={technology.icon}
+                  title={technology.title}
+                  link={technology.link}
+                  hover={technology.hover}
+                  size={sizeIconTech}
+                />
+              ))}
+            </div>
+          </div>
         </div>
-
-        <button
-          className="group inline-flex lg:hidden w-12 h-12 text-slate-800 text-center items-center justify-center rounded transition m-2"
-          aria-pressed={isPressed}
-          onClick={() => setIsPressed(!isPressed)}
-        >
-          <svg
-            className="w-6 h-6 fill-current pointer-events-none"
-            viewBox="0 0 16 16"
-            xmlns="http://www.w3.org/2000/svg"
-          >
-            <rect
-              className="text-[#fff] origin-center -translate-y-[5px] translate-x-[7px] transition-all duration-300 group-[[aria-pressed=true]]:translate-x-0 group-[[aria-pressed=true]]:translate-y-0 group-[[aria-pressed=true]]:rotate-[315deg]"
-              y="7"
-              width="9"
-              height="2"
-              rx="1"
-            ></rect>
-            <rect
-              className="text-[#fff] origin-center transition-all duration-300 ease-[cubic-bezier(.5,.85,.25,1.8)] group-[[aria-pressed=true]]:rotate-45"
-              y="7"
-              width="16"
-              height="2"
-              rx="1"
-            ></rect>
-            <rect
-              className="text-[#fff] origin-center translate-y-[5px] transition-all duration-300 ease-[cubic-bezier(.5,.85,.25,1.1)] group-[[aria-pressed=true]]:translate-y-0 group-[[aria-pressed=true]]:-rotate-[225deg]"
-              y="7"
-              width="9"
-              height="2"
-              rx="1"
-            ></rect>
-          </svg>
-        </button>
-        <div
-          className={`${isPressed ? "flex" : "hidden"} lg:flex w-full lg:w-auto items-center justify-center`}
-        >
-          <ul className="flex flex-col lg:flex-row pb-3 lg:pb-0">
-            {navButtons.map((btn, index) => (
-              <li key={index} className="text-center">
-                <NavBtn title={btn.title} link={btn.link} closeMenu={closeMenu} />
-              </li>
-            ))}
-            <li className="text-center">
-              <Link
-                href={contactForUs.link}
-                onClick={() => setIsPressed(!isPressed)}
-                className="inline-flex flex-col items-center justify-center font-medium cursor-pointer rounded px-4 py-2 bg-orange-500 hover:bg-orange-600 mx-3 my-4 md:my-0"
-              >
-                {contactForUs.text}
-              </Link>
-            </li>
-            <li className="text-center">
-              <ThemeToggle closeMenu={closeMenu} />
-            </li>
-          </ul>
-        </div>
-      </nav>
-    </div>
+      </div>
+    </header>
   );
 }

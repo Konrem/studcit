@@ -6,13 +6,11 @@ import landingContent from "@/app/content/landingContent";
 
 export default function Footer() {
   const { contactMain, socials, address } = landingContent.footer;
-
   const sizeIconSocial = 25;
 
   return (
-    <div className="dark-theme border-t-1 border-neutral-700">
-      <footer
-        id="footer"
+    <footer className="dark-theme border-t-1 mt-[3rem] lg:mt-[5rem] border-neutral-700" id="footer" role="contentinfo">
+      <div
         className="container flex item-center flex-wrap justify-between p-8 mx-auto"
       >
         <div>
@@ -55,7 +53,7 @@ export default function Footer() {
           </div>
         </div>
         <Map marker={address.placeDetails} position={address.position} />
-      </footer>
-    </div>
+      </div>
+    </footer>
   );
 }

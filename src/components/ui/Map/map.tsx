@@ -9,9 +9,11 @@ export default function Map(props: { marker: string, position: {x: number, y: nu
   return (
     <>
       <MapContainer
-        className="map-container w-[100%] h-[100%] lg:w-[200px] xl:w-[400px] h-[200px] m-4"
+        className="map-container w-full lg:w-[200px] xl:w-[400px] h-[200px] m-4"
         center={[props.position.y, props.position.x]}
         zoom={17}
+        maxZoom={18}
+        minZoom={14}
         scrollWheelZoom={true}
       >
         <TileLayer
@@ -24,7 +26,7 @@ export default function Map(props: { marker: string, position: {x: number, y: nu
             iconSize: [36, 36],
             iconAnchor: [18, 36],
             className: "mymarker",
-            html: `<img src="/marker-icon.png" />`,
+            html: `<img src="/marker-icon.png" alt="Marker" width="36" height="36" />`,
           })}
         >
           <Popup>

@@ -6,7 +6,18 @@ import emailjs from "@emailjs/browser";
 import formText from "@/app/content/formText";
 
 export default function ContactForm() {
-  const { title, description, nameInput, namePlaceholder, emailInput, emailPlaceholder, messageInput, messagePlaceholder, submitButton, submit } = formText;
+  const {
+    title,
+    description,
+    nameInput,
+    namePlaceholder,
+    emailInput,
+    emailPlaceholder,
+    messageInput,
+    messagePlaceholder,
+    submitButton,
+    submit,
+  } = formText;
 
   const [userInput, setUserInput] = useState({
     name: "",
@@ -47,19 +58,16 @@ export default function ContactForm() {
       });
       setUserInput({ name: "", contact: "", message: "" });
     } catch (err) {
-      toast.error(
-        submit.error,
-        {
-          position: "top-right",
-          autoClose: 5000,
-          hideProgressBar: true,
-          closeOnClick: true,
-          pauseOnHover: true,
-          draggable: true,
-          progress: undefined,
-          theme: "dark",
-        },
-      );
+      toast.error(submit.error, {
+        position: "top-right",
+        autoClose: 5000,
+        hideProgressBar: true,
+        closeOnClick: true,
+        pauseOnHover: true,
+        draggable: true,
+        progress: undefined,
+        theme: "dark",
+      });
       console.error(err);
     }
   };
@@ -80,13 +88,15 @@ export default function ContactForm() {
           onSubmit={handleSubmit}
           className="md:min-w-[28rem] mx-auto relative"
         >
-          <input
-            name="phone"
-            className="h-0 absolute -z-10"
-            tabIndex={-1}
-            value={hiddenValue}
-            onChange={handleChange}
-          />
+          <label className="h-0 absolute -z-10" htmlFor="phone">
+            <input
+              name="phone"
+              className="h-0 absolute -z-10"
+              tabIndex={-1}
+              value={hiddenValue}
+              onChange={handleChange}
+            />
+          </label>
           <label
             htmlFor="name"
             className="block mb-1 font-semibold text-base text-heading"
