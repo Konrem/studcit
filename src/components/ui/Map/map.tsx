@@ -9,7 +9,7 @@ export default function Map(props: { marker: string, position: {x: number, y: nu
   return (
     <>
       <MapContainer
-        className="map-container w-full lg:w-[200px] xl:w-[400px] h-[200px] m-4"
+        className="map-container w-full h-[200px] m-4"
         center={[props.position.y, props.position.x]}
         zoom={17}
         maxZoom={18}

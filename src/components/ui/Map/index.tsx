@@ -29,7 +29,7 @@ export default function Page(props: {
   }, []);
 
   return (
-    <div ref={ref}>
+    <div ref={ref} className="w-[100%] lg:w-[200px] xl:w-[400px]">
       {visible && <Map marker={props.marker} position={props.position} />}
     </div>
   );
