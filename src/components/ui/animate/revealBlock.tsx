@@ -8,12 +8,14 @@ interface RevealOnScrollProps {
   children: React.ReactNode;
   delay?: number;       
   direction?: Direction;
+  className?: string;
 }
 
 export default function RevealBlock({
   children,
   delay = 0,
   direction = 'up',
+  className = '',
 }: RevealOnScrollProps) {
   const ref = useRef<HTMLDivElement | null>(null);
   const [visible, setVisible] = useState(false);
@@ -23,9 +25,12 @@ export default function RevealBlock({
 
     const observer = new IntersectionObserver(
       ([entry]) => {
-        setVisible(entry.isIntersecting);
+        if (entry.isIntersecting) {
+          setVisible(true);
+          observer.disconnect();
+        }
       },
-      { threshold: 0.2 }
+      { threshold: 0.2 },
     );
 
     observer.observe(ref.current);
@@ -43,7 +48,7 @@ export default function RevealBlock({
     <div
       ref={ref}
       style={{ transitionDelay: `${delay}ms` }}
-      className={`
+      className={`${className}
         transition-all duration-700 ease-out
         ${visible ? 'opacity-100 translate-x-0 translate-y-0' : `opacity-0 ${directionClass}`}
       `}

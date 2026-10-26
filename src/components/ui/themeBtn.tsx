@@ -1,40 +1,35 @@
 "use client";
 
 import Image from "next/image";
-import Link from "next/link";
 import { useState } from "react";
+import landingContent from "@/app/content/landingContent";
 
-// eslint-disable-next-line @typescript-eslint/no-explicit-any
-export default function ThemeToggle({ closeMenu }: { closeMenu: any }) {
-  const [theme, setTheme] = useState("light");
+export default function ThemeToggle({ closeMenu }: { closeMenu: () => void }) {
+  const [theme, setTheme] = useState<"light" | "dark">("light");
+  const { themeToggleLabels } = landingContent.header;
 
   const toggleTheme = () => {
     const newTheme = theme === "light" ? "dark" : "light";
     setTheme(newTheme);
     document.body.setAttribute("data-theme", newTheme);
-    closeMenu(true);
+    closeMenu();
   };
 
   return (
-    <Link
-      href="#"
-      className="group relative overflow-hidden p-2 my-2 lg:my-0 inline-flex flex-col items-center justify-center transition-all duration-200 ease-out rounded-full hover:bg-white"
+    <button
+      type="button"
+      aria-label={themeToggleLabels[theme]}
+      aria-pressed={theme === "dark"}
+      title={themeToggleLabels[theme]}
+      className="my-1 inline-flex size-10 items-center justify-center rounded-full transition-colors hover:bg-white/10 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[var(--accent)] xl:my-0"
       onClick={toggleTheme}
     >
       <Image
-        className={`z-10 transition-discrete transition-all duration-500 ease-out ${theme === "light" ? "absolute invert collapse group-hover:opacity-100 group-hover:visible translate-x-10 -translate-y-3 group-hover:translate-x-0 group-hover:translate-y-0" : "inline-block translate-x-0 translate-y-0 group-hover:-translate-x-10 group-hover:translate-y-3 group-hover:opacity-0 group-hover:invisible"}`}
-        src="/moon.svg"
-        alt="Theme"
+        src={theme === "light" ? "/moon.svg" : "/sun.svg"}
+        alt=""
         width={25}
         height={25}
       />
-      <Image
-        className={`z-10 transition-discrete transition-all duration-500 ease-out ${theme === "dark" ? "absolute invert collapse group-hover:opacity-100 group-hover:visible translate-x-10 -translate-y-3 group-hover:translate-x-0 group-hover:translate-y-0" : "inline-block translate-x-0 translate-y-0 group-hover:-translate-x-10 group-hover:translate-y-3 group-hover:opacity-0 group-hover:invisible"}`}
-        src="/sun.svg"
-        alt="Theme"
-        width={25}
-        height={25}
-      />
-    </Link>
+    </button>
   );
 }

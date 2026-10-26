@@ -2,139 +2,88 @@
 
 import browserInside from "@/app/content/browserInside";
 import Image from "next/image";
-import { useState } from "react";
 
 export default function SiteInBrowser() {
-  const [open, setOpen] = useState(false);
-
-  const { title, description, header, headerMobile, projects } = browserInside;
+  const {
+    title,
+    description,
+    header,
+    headerMobile,
+    projects,
+    siteImageAlt,
+  } = browserInside;
 
   return (
-    <div className="mx-auto mt-2 w-full">
-      <div className="w-full h-[28rem] sm:h-[21rem] overflow-hidden relative">
-        <Image
-          src="/siteInBrowser/modern-laptop-laying-desk.jpg"
-          alt="Laptop on desk"
-          fill
-          priority
-          className="object-cover object-center"
-        />
-        <div className="h-full w-full rounded-md bg-clip-padding backdrop-blur-[3px] bg-opacity-10">
-          <div className="flex justify-between items-center p-4">
-            <div className="hidden text-xs font-medium text-white md:flex">
-              {header.map((item, index) => (
-                <span className="px-2 cursor-pointer" key={index}>
+    <div className="relative h-full min-h-0 w-full overflow-hidden">
+      <Image
+        src="/siteInBrowser/modern-laptop-laying-desk.webp"
+        alt={siteImageAlt}
+        fill
+        sizes="(max-width: 640px) 85vw, (max-width: 1024px) 55vw, 800px"
+        priority
+        className="object-cover object-center"
+      />
+      <div className="relative flex h-full w-full flex-col bg-black/10 backdrop-blur-[2px]">
+        <div className="flex shrink-0 items-center justify-between px-2 py-1.5 sm:px-3">
+          <div className="hidden text-[10px] font-medium text-white md:flex">
+            {header.map((item, index) => (
+              <span className="cursor-pointer px-2" key={index}>
+                {item.name}
+              </span>
+            ))}
+          </div>
+
+          <Image
+            className="mx-1 size-8 sm:size-10"
+            src="/logo/StudCIT_MonoLogo.svg"
+            alt=""
+            width={40}
+            height={40}
+          />
+
+          <div className="hidden text-xs font-medium text-white md:flex">
+            <span className="cursor-pointer px-1">
+              {headerMobile[0].value}
+            </span>
+          </div>
+          <div className="flex items-center gap-1 md:hidden">
+            <Image
+              src={headerMobile[0].icon}
+              alt=""
+              width={14}
+              height={14}
+              className="size-3.5 invert"
+            />
+            <span className="text-[7px] font-medium text-white">
+              {headerMobile[0].value}
+            </span>
+          </div>
+        </div>
+        <div className="min-h-0 flex-1 px-2">
+          <div className="mx-auto mt-1 text-center sm:mt-2">
+            <div className="px-2 text-xs font-semibold text-white sm:text-base md:text-xl">
+              {title}
+            </div>
+            <div className="mx-auto mt-1 hidden max-w-64 px-2 text-[10px] text-white/90 sm:block md:text-xs">
+              {description}
+            </div>
+          </div>
+          <div className="mt-1 grid grid-cols-2 gap-1 px-1 sm:mt-3 sm:gap-2 sm:px-2">
+            {projects.map((item) => (
+              <div
+                key={item.name}
+                className="flex min-h-8 min-w-0 flex-col items-center justify-center gap-0.5 rounded-lg border border-white/25 bg-black/55 p-1 shadow-sm backdrop-blur sm:min-h-14 sm:gap-1 sm:p-1.5"
+              >
+                <Image
+                  className="size-4 shrink-0 object-contain sm:size-6"
+                  src={item.icon}
+                  alt=""
+                  width={20}
+                  height={20}
+                />
+                <span className="block max-w-full truncate text-[7px] font-medium text-white sm:text-[9px]">
                   {item.name}
                 </span>
-              ))}
-            </div>
-
-            <Image
-              className="mx-2"
-              src="/logo/StudCIT_MonoLogo.svg"
-              alt=""
-              width={75}
-              height={75}
-            />
-
-            <div className="hidden text-xs font-medium text-white md:flex">
-              <span className="px-1 cursor-pointer">
-                {headerMobile[0].value}
-              </span>
-            </div>
-            <div className="relative md:hidden z-50">
-              <button
-                onClick={() => setOpen(!open)}
-                aria-label="Contact menu toggle"
-                className="w-9 h-10 flex flex-col items-center justify-center cursor-pointer mr-3"
-              >
-                <div
-                  className={`w-[50%] h-[2px] bg-white rounded-sm transition-all duration-300 origin-left ${
-                    open
-                      ? "rotate-[-45deg] translate-y-[0.5rem]"
-                      : "translate-y-[0.5rem]"
-                  }`}
-                />
-                <div
-                  className={`w-[50%] h-[2px] bg-white rounded-sm transition-all duration-300 ${
-                    open ? "opacity-0" : "opacity-100"
-                  }`}
-                />
-                <div
-                  className={`w-[50%] h-[2px] bg-white rounded-sm transition-all duration-300 origin-left ${
-                    open
-                      ? "rotate-[45deg] -translate-y-[0.5rem]"
-                      : "-translate-y-[0.5rem]"
-                  }`}
-                />
-              </button>
-
-              <div
-                className={`absolute right-0 top-12 flex flex-col items-center gap-4 transition-all duration-300 ${
-                  open
-                    ? "opacity-100 translate-y-0 pointer-events-auto"
-                    : "opacity-0 translate-y-4 pointer-events-none"
-                }`}
-              >
-                {headerMobile.map((item, index) => (
-                  <span
-                    key={index}
-                    onClick={() => setOpen(false)}
-                    className={`flex flex-col items-center cursor-pointer transition-all duration-500 cursor-pointer ${
-                      open
-                        ? "translate-y-0 opacity-100"
-                        : "translate-y-4 opacity-0"
-                    }`}
-                    style={{
-                      transitionDelay: open ? `${index * 100}ms` : "0ms",
-                    }}
-                  >
-                    <div className="w-10 h-10 bg-white rounded-full flex items-center justify-center shadow-lg transition-all duration-300 hover:scale-110 hover:bg-gray-100">
-                      <Image
-                        className="invert p-1"
-                        src={item.icon}
-                        alt={item.name}
-                        width={25}
-                        height={25}
-                      />
-                    </div>
-
-                    <span className="text-xs font-bold text-white text-center mt-2">
-                      {item.name}
-                    </span>
-                  </span>
-                ))}
-              </div>
-            </div>
-          </div>
-          <div className="flex flex-col sm:flex-row px-4 justify-center md:justify-between items-start h-auto">
-            <div className="mx-auto mt-4 text-center">
-              <div className="text-2xl font-medium text-white px-2">
-                {title}
-              </div>
-              <div className="text-sm text-white mt-4 px-4 sm:px-2 w-[12rem]">
-                {description}
-              </div>
-            </div>
-          </div>
-          <div className="flex justify-center flex-wrap sm:gap-10 mt-4">
-            {projects.map((item, index) => (
-              <div
-                key={index}
-                className="max-w-[50%] min-w-[35%] sm:min-w-auto w-auto flex justify-center items-center flex-col mx-2 sm:mx-0 mt-4 md:mt-6"
-              >
-                <div className="w-[6rem] h-[6rem] rounded-xl bg-black/50 backdrop-blur-2xl border border-white/30 flex flex-col items-center justify-center transition-all duration-300 hover:scale-110 shadow-lg shadow-black/20">
-                  <Image
-                    className="py-2"
-                    src={item.icon}
-                    alt={item.name}
-                    width={40}
-                    height={40}
-                  />
-                  <span className="text-xs text-white/90 text-center px-1 my-1 block">
-                    {item.name}
-                  </span>
-                </div>
               </div>
             ))}
           </div>

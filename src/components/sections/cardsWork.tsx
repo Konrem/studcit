@@ -1,20 +1,28 @@
 import landingContent from "@/app/content/landingContent";
 import RevealBlock from "../ui/animate/revealBlock";
 import Card from "../ui/card";
+import SectionHeading from "../ui/sectionHeading";
 
 export default function AboutCards() {
   const {title, description, anchor, cardsWork} = landingContent.cards;
   return (
-    <div className="mt-[3rem] lg:mt-[5rem] scroll-mt-20" id={anchor}>
-      <div className="text-center pb-4">
-        <h2 className="font-bold text-3xl md:text-5xl">{title}</h2>
-        <p className="font-medium text-xl py-4">
-          {description}
-        </p>
-      </div>
-      <div className="container mx-auto flex justify-center lg:justify-around flex-wrap gap-8 lg:flex-nowrap lg:gap-2">
+    <section className="container mx-auto mt-12 scroll-mt-24 px-4 md:mt-20" id={anchor}>
+      <SectionHeading
+        id={`${anchor}-title`}
+        title={title}
+        description={description}
+      />
+      <div className="grid grid-cols-2 gap-4 sm:grid-cols-3 lg:grid-cols-5 xl:grid-cols-[repeat(5,minmax(0,220px))] xl:justify-center">
         {cardsWork.map((card, index) => (
-          <RevealBlock key={index} delay={index * 150}>
+          <RevealBlock
+            key={index}
+            delay={index * 150}
+            className={
+              index === cardsWork.length - 1
+                ? "col-span-2 mx-auto w-[calc(50%-0.5rem)] sm:col-span-1 sm:mx-0 sm:w-full"
+                : ""
+            }
+          >
             <Card
               icon={card.icon}
               title={card.title}
@@ -23,6 +31,6 @@ export default function AboutCards() {
           </RevealBlock>
         ))}
       </div>
-    </div>
+    </section>
   );
 }

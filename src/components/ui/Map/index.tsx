@@ -7,6 +7,8 @@ const Map = dynamic(() => import("./map"), { ssr: false });
 
 export default function Page(props: {
   marker: string;
+  markerAlt: string;
+  attribution: string;
   position: { x: number; y: number };
 }) {
   const ref = useRef(null);
@@ -29,8 +31,15 @@ export default function Page(props: {
   }, []);
 
   return (
-    <div ref={ref} className="w-[100%] lg:w-[200px] xl:w-[400px]">
-      {visible && <Map marker={props.marker} position={props.position} />}
+    <div ref={ref} className="w-full">
+      {visible && (
+        <Map
+          marker={props.marker}
+          markerAlt={props.markerAlt}
+          attribution={props.attribution}
+          position={props.position}
+        />
+      )}
     </div>
   );
 }

@@ -1,0 +1,61 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 640" fill="none">
+  <defs>
+    <linearGradient id="bg" x1="60" y1="42" x2="1110" y2="620" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#FFF6F0"/>
+      <stop offset="1" stop-color="#EEF1F5"/>
+    </linearGradient>
+    <linearGradient id="hero" x1="470" y1="226" x2="1072" y2="516" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#343741"/>
+      <stop offset="1" stop-color="#17191F"/>
+    </linearGradient>
+    <linearGradient id="accent" x1="156" y1="0" x2="246" y2="96" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#FF946B"/>
+      <stop offset="1" stop-color="#EF5A24"/>
+    </linearGradient>
+    <filter id="shadow" x="100" y="65" width="1000" height="540" color-interpolation-filters="sRGB" filterUnits="userSpaceOnUse">
+      <feDropShadow dx="0" dy="22" stdDeviation="24" flood-color="#202127" flood-opacity=".13"/>
+    </filter>
+  </defs>
+  <rect width="1200" height="640" rx="32" fill="url(#bg)"/>
+  <circle cx="1075" cy="105" r="114" fill="#EF5A24" fill-opacity=".08"/>
+  <circle cx="114" cy="540" r="82" fill="#EF5A24" fill-opacity=".07"/>
+  <g filter="url(#shadow)">
+    <rect x="136" y="94" width="928" height="452" rx="22" fill="#fff"/>
+    <path d="M158 94h884a22 22 0 0 1 22 22v40H136v-40a22 22 0 0 1 22-22Z" fill="#25272E"/>
+    <circle cx="166" cy="127" r="6" fill="#FF7966"/>
+    <circle cx="187" cy="127" r="6" fill="#FFC45C"/>
+    <circle cx="208" cy="127" r="6" fill="#63C98B"/>
+    <rect x="415" y="112" width="371" height="29" rx="14.5" fill="#3A3C44"/>
+    <path d="M433 126h152" stroke="#B9BEC8" stroke-width="7" stroke-linecap="round"/>
+    <rect x="160" y="156" width="880" height="58" fill="#fff"/>
+    <rect x="188" y="173" width="27" height="27" rx="8" fill="url(#accent)"/>
+    <path d="M196 192v-11l6-4 6 4v11h-4v-7h-4v7h-4Z" fill="#fff"/>
+    <path d="M225 181h98" stroke="#202127" stroke-width="8" stroke-linecap="round"/>
+    <path d="M691 184h56M777 184h58M865 184h66" stroke="#8C929D" stroke-width="6" stroke-linecap="round"/>
+    <rect x="951" y="168" width="65" height="31" rx="10" fill="#EF5A24"/>
+    <path d="M967 184h33" stroke="#fff" stroke-width="5" stroke-linecap="round"/>
+    <path d="M160 214h880" stroke="#E7E9ED" stroke-width="2"/>
+    <rect x="160" y="216" width="880" height="290" fill="#F8F9FB"/>
+    <text x="197" y="270" fill="#EF5A24" font-family="Arial,sans-serif" font-size="13" font-weight="700" letter-spacing="2">ПРО КОМПАНІЮ</text>
+    <path d="M196 299h285" stroke="#202127" stroke-width="21" stroke-linecap="round"/>
+    <path d="M196 334h235" stroke="#202127" stroke-width="21" stroke-linecap="round"/>
+    <path d="M197 370h270" stroke="#202127" stroke-width="21" stroke-linecap="round"/>
+    <path d="M198 407h221M198 428h185" stroke="#9299A4" stroke-width="9" stroke-linecap="round"/>
+    <rect x="198" y="454" width="116" height="34" rx="10" fill="#EF5A24"/>
+    <path d="M218 471h76" stroke="#fff" stroke-width="6" stroke-linecap="round"/>
+    <rect x="534" y="239" width="466" height="238" rx="16" fill="url(#hero)"/>
+    <circle cx="777" cy="356" r="87" fill="#EF5A24" fill-opacity=".16"/>
+    <path d="M706 410c25-54 46-80 74-80 23 0 32 24 51 24 19 0 31-49 67-49 28 0 50 36 74 79v48H706v-22Z" fill="#EF5A24" fill-opacity=".74"/>
+    <path d="M748 337c9-22 19-31 31-31 13 0 21 10 29 31" stroke="#FFB08F" stroke-width="8" stroke-linecap="round"/>
+    <rect x="820" y="276" width="88" height="16" rx="8" fill="#fff" fill-opacity=".88"/>
+    <rect x="820" y="302" width="56" height="9" rx="4.5" fill="#fff" fill-opacity=".45"/>
+    <rect x="569" y="439" width="151" height="8" rx="4" fill="#fff" fill-opacity=".65"/>
+  </g>
+  <g>
+    <rect x="863" y="463" width="199" height="103" rx="16" fill="#fff"/>
+    <rect x="885" y="486" width="49" height="49" rx="14" fill="#FFF0E8"/>
+    <path d="M899 519v-12l10-7 10 7v12h-7v-8h-6v8h-7Z" fill="#EF5A24"/>
+    <path d="M949 493h88M949 510h62" stroke="#555D68" stroke-width="8" stroke-linecap="round"/>
+    <path d="M949 531h42" stroke="#B1B6BF" stroke-width="7" stroke-linecap="round"/>
+  </g>
+</svg>

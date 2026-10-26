@@ -8,27 +8,28 @@ export default function CardInfo(props: {
   description: string;
 }) {
   return (
-    <div className="container mx-auto py-0 md:py-6 px-6 mt-8 md:my-8 flex items-center justify-center flex-wrap gap-4 md:gap-8 lg:flex-nowrap lg:even:flex-row-reverse">
-      <RevealBlock direction={props.index % 2 === 0 ? "left" : "right"}>
+    <RevealBlock
+      direction={props.index % 2 === 0 ? "up" : "down"}
+      className="h-full"
+    >
+      <article className="h-full overflow-hidden rounded-2xl border border-[var(--border)] bg-[var(--surface)] shadow-[var(--shadow-card)] transition-transform duration-200 hover:-translate-y-1">
         <Image
           src={props.image}
-          alt=""
-          width={500}
-          height={300}
-          sizes="(max-width: 768px) 100vw, 500px"
-          className="rounded"
+          alt={props.title}
+          width={600}
+          height={360}
+          sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw"
+          className="h-48 w-full object-cover"
         />
-      </RevealBlock>
-      <RevealBlock direction={props.index % 2 === 1 ? "left" : "right"}>
-        <div className="max-w-[32em] sm:mx-8">
-          <h3 className="font-semibold text-2xl mb-4 ms:mb-6 text-center">
+        <div className="p-5">
+          <h3 className="mb-3 text-lg font-bold leading-tight">
             {props.title}
           </h3>
-          <p className="text-sm md:text-base text-justify">
+          <p className="text-sm leading-relaxed text-[var(--text-secondary)]">
             {props.description}
           </p>
         </div>
-      </RevealBlock>
-    </div>
+      </article>
+    </RevealBlock>
   );
 }

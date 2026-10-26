@@ -11,7 +11,7 @@ export default function NavBtn({ title, link, closeMenu }: NavBtnProps) {
     <Link
       href={link}
       onClick={closeMenu}
-      className="py-4 lg:p-2 mx-3
+      className="mx-3 py-4 text-[var(--text-on-strong)] xl:p-2
                 inline-flex 
                 flex-col 
                 items-center 
@@ -22,7 +22,7 @@ export default function NavBtn({ title, link, closeMenu }: NavBtnProps) {
                 relative
                 hover:after:w-full
                 hover:font-bold
-                hover:text-orange-400
+                hover:text-[var(--accent-text)]
                 after:absolute 
                 after:left-1/2 
                 after:bottom-0
@@ -31,7 +31,10 @@ export default function NavBtn({ title, link, closeMenu }: NavBtnProps) {
                 after:bg-current
                 after:transition-all 
                 after:duration-400
-                after:-translate-x-1/2"
+                after:-translate-x-1/2
+                focus-visible:outline-2
+                focus-visible:outline-offset-2
+                focus-visible:outline-[var(--accent)]"
     >
       {title}
       <span className="invisible h-0 font-bold" aria-hidden="true">

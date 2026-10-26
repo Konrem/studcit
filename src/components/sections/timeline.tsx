@@ -1,37 +1,33 @@
 import landingContent from "@/app/content/landingContent";
-import RevealBlock from "../ui/animate/revealBlock";
-import TimelineBlock from "../ui/timeline-block";
+import SectionHeading from "../ui/sectionHeading";
 
 export default function Timeline() {
-  const {title, anchor, timelineBlocks} = landingContent.timeline;
+  const {title, subtitle, anchor, timelineBlocks} = landingContent.timeline;
 
   return (
-    <div className="mt-[3rem] lg:mt-[5rem] scroll-mt-20" id={anchor}>
-      <h2 className="font-bold text-center mb-4 md:mb-8 text-3xl md:text-5xl">
-        {title}
-      </h2>
-      <ul className="relative before:absolute before:top-0 before:left-[1.4rem] pl-[2rem] pr-4 sm:before:left-[2.4rem] sm:px-[3rem] lg:before:left-1/2 before:h-full before:w-0.5 before:-translate-x-1/2 before:rounded-full before:bg-[var(--text-primary)] overflow-hidden">
+    <section
+      className="container mx-auto mt-12 scroll-mt-24 px-4 md:mt-20"
+      id={anchor}
+      aria-labelledby="timeline-title"
+    >
+      <SectionHeading
+        id="timeline-title"
+        title={title}
+        description={subtitle}
+      />
+      <ol className="relative grid gap-4 sm:grid-cols-2 lg:grid-cols-5 lg:gap-5 lg:before:absolute lg:before:left-[10%] lg:before:right-[10%] lg:before:top-5 lg:before:h-px lg:before:bg-[var(--border-strong)]">
         {timelineBlocks.map((block, index) => (
-          <li
-            className="group relative grid lg:grid-cols-2 my-10 -ml-5 lg:m-0 lg:odd:-ml-5 lg:even:-mr-5"
-            key={index}
-          >
-            <div className="relative flex items-start gap-4 lg:group-even:flex-row-reverse lg:group-even:text-right lg:group-odd:order-last">
-              <span className="size-5 mt-8 shrink-0 rounded-full bg-[var(--text-primary)]"></span>
-              <span className="absolute mt-10 w-[60px] sm:w-[150px] h-[2px] bg-[var(--text-primary)]"></span>
-              <div
-                className={`size-3 ml-[20px] sm:ml-[110px] lg:ml-0 mt-9 ${index % 2 === 0 ? "lg:ml-[110px]" : "lg:mr-[110px]"} shrink-0 rounded-full bg-[var(--text-primary)]`}
-              ></div>
-              <TimelineBlock
-                icon={block.icon}
-                title={block.title}
-                description={block.description}
-              />
-            </div>
-            <div className="hidden lg:block" aria-hidden="true"></div>
+          <li className="relative rounded-2xl border border-[var(--border)] bg-[var(--surface)] p-5 text-center shadow-[var(--shadow-card)]" key={block.title}>
+            <span className="relative z-10 mx-auto flex size-11 items-center justify-center rounded-full bg-[var(--accent)] text-sm font-bold text-[var(--text-on-accent)] shadow-md">
+              {String(index + 1).padStart(2, "0")}
+            </span>
+            <h3 className="mt-4 text-lg font-bold">{block.title}</h3>
+            <p className="mt-2 text-sm leading-relaxed text-[var(--text-secondary)]">
+              {block.description}
+            </p>
           </li>
         ))}
-      </ul>
-    </div>
+      </ol>
+    </section>
   );
 }

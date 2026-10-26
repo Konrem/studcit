@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Inter } from 'next/font/google'
 import "./globals.css";
+import siteMetadata from "./content/siteMetadata";
 
 const inter = Inter({
   variable: "--font-inter",
@@ -8,8 +9,7 @@ const inter = Inter({
 })
 
 export const metadata: Metadata = {
-  title: "StudCIT",
-  description: "Створрення сайтів на замовлення",
+  ...siteMetadata,
 };
 
 export default function RootLayout({

@@ -1,43 +1,40 @@
 const browserInside = {
   browserTab: "StudCIT",
   browserUrl: "http://localhost:3000",
+  browserAddressPlaceholder: "Введіть адресу сайту",
+  siteImageAlt: "Ноутбук на робочому столі",
   title: "StudCIT",
-  description: "Website and web application development",
+  description: "Розробка сайтів і вебзастосунків",
   header: [
     {
-      name: "About",
+      name: "Про нас",
     },
     {
-      name: "Contacts",
+      name: "Контакти",
     },
   ],
   headerMobile: [
     {
-      name: "Telephone",
+      name: "Телефон",
       value: "+38(0XX) XXX-XX-XX",
       icon: "/social/telephone.svg",
-    },
-    {
-      name: "Email",
-      value: "studcit@studcit.com",
-      icon: "/social/email.svg",
     },
   ],
   projects: [
     {
-      name: "Business Card",
+      name: "Сайт-візитка",
       icon: "/siteInBrowser/business-card.svg",
     },
     {
-      name: "Landing Page",
+      name: "Лендінг",
       icon: "/siteInBrowser/landing-page.svg",
     },
     {
-      name: "Component",
+      name: "Вебкомпонент",
       icon: "/siteInBrowser/component.svg",
     },
     {
-      name: "Multi-Page",
+      name: "Багатосторінковий сайт",
       icon: "/siteInBrowser/multipage.svg",
     },
   ],

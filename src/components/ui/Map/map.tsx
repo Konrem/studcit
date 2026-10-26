@@ -5,11 +5,16 @@ import "leaflet/dist/leaflet.css";
 import { Marker, Popup } from "react-leaflet";
 import L from "leaflet";
 
-export default function Map(props: { marker: string, position: {x: number, y: number} }) {
+export default function Map(props: {
+  marker: string;
+  markerAlt: string;
+  attribution: string;
+  position: { x: number; y: number };
+}) {
   return (
     <>
       <MapContainer
-        className="map-container w-full h-[200px] m-4"
+        className="map-container h-[220px] w-full overflow-hidden rounded-xl"
         center={[props.position.y, props.position.x]}
         zoom={17}
         maxZoom={18}
@@ -17,7 +22,7 @@ export default function Map(props: { marker: string, position: {x: number, y: nu
         scrollWheelZoom={true}
       >
         <TileLayer
-          attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+          attribution={props.attribution}
           url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
         />
         <Marker
@@ -26,7 +31,7 @@ export default function Map(props: { marker: string, position: {x: number, y: nu
             iconSize: [36, 36],
             iconAnchor: [18, 36],
             className: "mymarker",
-            html: `<img src="/marker-icon.png" alt="Marker" width="36" height="36" />`,
+            html: `<img src="/marker-icon.png" alt="${props.markerAlt}" width="36" height="36" />`,
           })}
         >
           <Popup>
