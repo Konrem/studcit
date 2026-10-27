@@ -7,7 +7,7 @@ interface LaptopScreenProps {
 
 export default function LaptopScreen({ browser, status }: LaptopScreenProps) {
   return (
-    <div className="relative w-full rounded-t-[1.75rem] border-x border-t border-[#3a3d44] bg-[#272a30] p-2 shadow-2xl ring-1 ring-black/30 sm:p-4">
+    <div className="relative w-full rounded-t-[1.25rem] border-x border-t border-[#3a3d44] bg-[#272a30] p-2 shadow-2xl ring-1 ring-black/30 sm:p-4">
       {/* Вебкамера з індикатором */}
       <div className="flex justify-center items-center pb-2">
         <div className="size-1.5 rounded-full bg-[#141519] ring-1 ring-[#454545]" />

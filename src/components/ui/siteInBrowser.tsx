@@ -52,7 +52,7 @@ export default function SiteInBrowser() {
               alt=""
               width={14}
               height={14}
-              className="size-3.5 invert"
+              className="size-3.5"
             />
             <span className="text-[7px] font-medium text-white">
               {headerMobile[0].value}
@@ -72,10 +72,10 @@ export default function SiteInBrowser() {
             {projects.map((item) => (
               <div
                 key={item.name}
-                className="flex min-h-8 min-w-0 flex-col items-center justify-center gap-0.5 rounded-lg border border-white/25 bg-black/55 p-1 shadow-sm backdrop-blur sm:min-h-14 sm:gap-1 sm:p-1.5"
+                className="flex min-h-8 min-w-0 flex-col items-center justify-center gap-0 rounded-lg border border-white/25 bg-black/70 p-1 shadow-sm backdrop-blur sm:min-h-14 sm:gap-1 sm:p-1.5"
               >
                 <Image
-                  className="size-4 shrink-0 object-contain sm:size-6"
+                  className="size-3.5 shrink-0 object-contain sm:size-6"
                   src={item.icon}
                   alt=""
                   width={20}

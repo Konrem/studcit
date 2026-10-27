@@ -8,7 +8,7 @@ const landingContent = {
     },
     navButtons: [
       {
-        title: "Основні аспекти",
+        title: "Наш підхід",
         link: "/#main-aspects",
       },
       {
@@ -88,7 +88,7 @@ const landingContent = {
   },
 
   info: {
-    title: "Основні аспекти",
+    title: "Наш підхід до веброзробки",
     anchor: "main-aspects",
     infoCards: [
       {

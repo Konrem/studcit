@@ -20,7 +20,7 @@ export default function Header() {
 
   return (
     <header
-      className="bg-[var(--bg-main)] text-[var(--text-primary)] overflow-hidden pb-12 pt-14 transition-colors lg:pt-20 md:pb-16"
+      className="bg-[var(--bg-main)] text-[var(--text-primary)] overflow-hidden pt-16 transition-colors lg:pt-20"
       id="top"
       role="banner"
     >
@@ -80,25 +80,23 @@ export default function Header() {
         {/* Стек технологій */}
 
           <div className="technology-stack mt-12 flex flex-col gap-4 rounded-2xl border border-[var(--border)] bg-[var(--surface)] p-4 shadow-[var(--shadow-card)] sm:mt-16 sm:p-6">
-            <span className="text-center text-xs font-bold uppercase tracking-wider text-[var(--text-secondary)] sm:text-left">
+            <span className="text-center text-xs font-bold uppercase tracking-wider text-[var(--text-secondary)]">
               {technologiesLabel}
             </span>
-            <div className="flex w-full items-stretch justify-center gap-1 sm:gap-3">
+            <div className="grid w-full grid-cols-5 items-center justify-items-center">
               {technologies.map((technology) => (
                 <div
                   key={technology.title}
-                  className="technology-item group relative flex min-h-24 min-w-0 flex-1 flex-col items-center justify-center gap-2 overflow-hidden rounded-xl border border-transparent px-1 py-3 text-center transition-colors duration-300 hover:border-[var(--border)] hover:bg-[var(--surface-secondary)] sm:min-h-28 sm:px-2"
+                  className="technology-item flex size-[52px] items-center justify-center sm:size-16"
                 >
                   <Image
                     src={technology.icon}
-                    alt=""
+                    alt={technology.title}
+                    title={technology.title}
                     width={sizeIconTech}
                     height={sizeIconTech}
-                    className="technology-icon size-10 shrink-0 object-contain transition duration-500 ease-out sm:size-14 lg:size-16"
+                    className="technology-icon size-10 object-contain sm:size-14"
                   />
-                  <span className="technology-title break-words text-[10px] font-semibold leading-tight text-[var(--text-primary)] sm:text-xs">
-                    {technology.title}
-                  </span>
                 </div>
               ))}
             </div>

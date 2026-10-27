@@ -111,70 +111,13 @@ body {
   opacity: 0.9;
 }
 
-.technology-item::before {
-  position: absolute;
-  inset: 0;
-  border-radius: inherit;
-  background: radial-gradient(
-    circle at 50% 35%,
-    var(--accent-soft),
-    transparent 68%
-  );
-  content: "";
-  opacity: 0;
-  pointer-events: none;
-  transform: scale(0.72);
-  transition:
-    opacity 350ms ease,
-    transform 500ms cubic-bezier(0.2, 0.8, 0.2, 1);
-}
-
-.technology-icon,
-.technology-title {
-  position: relative;
-  z-index: 1;
-}
-
 .technology-icon {
-  filter: grayscale(1) saturate(0) opacity(0.58);
   transform: scale(1);
-  transition:
-    filter 500ms ease,
-    transform 500ms cubic-bezier(0.2, 0.8, 0.2, 1);
+  transition: transform 300ms cubic-bezier(0.2, 0.8, 0.2, 1);
 }
 
-.technology-item:hover::before {
-  opacity: 1;
-  transform: scale(1);
-}
-
-.technology-item:hover .technology-icon {
-  filter: grayscale(0) saturate(1) opacity(1)
-    drop-shadow(0 5px 10px rgb(239 90 36 / 20%));
-  transform: translateY(-8px) rotate(-3deg) scale(1.16);
-}
-
-.technology-title {
-  color: var(--text-primary);
-}
-
-@media (min-width: 640px) and (hover: hover) {
-  .technology-title {
-    position: absolute;
-    right: 0.5rem;
-    bottom: 0.5rem;
-    left: 0.5rem;
-    opacity: 0;
-    transform: translateY(8px);
-    transition:
-      opacity 250ms ease,
-      transform 250ms ease;
-  }
-
-  .technology-item:hover .technology-title {
-    opacity: 1;
-    transform: translateY(0);
-  }
+.technology-icon:hover {
+  transform: scale(1.16);
 }
 
 [data-theme="dark"] .about-value-card::before {
@@ -190,9 +133,7 @@ body {
     transition: none;
   }
 
-  .technology-item::before,
-  .technology-icon,
-  .technology-title {
+  .technology-icon {
     transition: none;
   }
 }
